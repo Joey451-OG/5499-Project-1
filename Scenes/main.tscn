@@ -3,8 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://dexlpc5fdvfff" path="res://Assets/DEV/DEV_background.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://vmtniiwn1oht" path="res://Scenes/Player.tscn" id="1_jjgbg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
-size = Vector2(1312, 17)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
+size = Vector2(651, 812)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
+size = Vector2(635, 789)
 
 [node name="Node2D" type="Node2D" unique_id=1050794869]
 
@@ -14,11 +19,11 @@ position = Vector2(624.25, 348.5)
 scale = Vector2(24.74219, 14.390625)
 texture = ExtResource("1_bo1nx")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1980212857]
+[node name="World Border" type="StaticBody2D" parent="." unique_id=1980212857]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=72585754]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Border" unique_id=72585754]
 position = Vector2(646, -1.5)
-shape = SubResource("RectangleShape2D_bo1nx")
+shape = SubResource("WorldBoundaryShape2D_kyqiw")
 debug_color = Color(0.9999998, 0.0024176077, 0.09460204, 0.41960785)
 
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
@@ -27,3 +32,17 @@ position = Vector2(161, 158)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=179472342]
 editor_description = "0,0 offset (640, 360) @ scale = 1"
 position = Vector2(640, 360)
+
+[node name="Air" type="Area2D" parent="." unique_id=957781194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Air" unique_id=1285172597]
+position = Vector2(315.5, 396)
+shape = SubResource("RectangleShape2D_sj43t")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Water" type="Area2D" parent="." unique_id=1136233369]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water" unique_id=321074166]
+position = Vector2(969.5, 384.5)
+shape = SubResource("RectangleShape2D_i58cg")
+debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
