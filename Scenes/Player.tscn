@@ -12,7 +12,16 @@ script = ExtResource("1_kyqiw")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1371421923]
 texture = ExtResource("2_kyqiw")
 
+[node name="lungIndicator" type="Line2D" parent="Sprite2D" unique_id=17645206]
+position = Vector2(0, -44)
+points = PackedVector2Array(30, 0, -30, 0)
+default_color = Color(1, 0, 0, 1)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=802217270]
 position = Vector2(-1.9073486e-06, 1.9073486e-06)
 scale = Vector2(0.20000052, 0.20000052)
 shape = SubResource("RectangleShape2D_sj43t")
+
+[node name="lungTimer" type="Timer" parent="." unique_id=869646647]
+
+[connection signal="timeout" from="lungTimer" to="." method="_on_lung_timer_timeout"]
