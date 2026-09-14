@@ -11,13 +11,17 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	look_at(get_global_mouse_position())
+	
+	#print(sprite.get_rect().has_point(to_local(get_global_mouse_position())))
+	if not sprite.get_rect().has_point(to_local(get_global_mouse_position())):
+		look_at(get_global_mouse_position())
+	
 	velocity = transform.x * Input.get_action_strength("swim") * VELCOCITY_IMPULSE
 	
-	 #sinking
+	#sinking
 	if not Input.is_action_pressed("swim"):
 		velocity.y += VELCOCITY_IMPULSE * 0.5
-	
+		
 
 	move_and_slide()
 
