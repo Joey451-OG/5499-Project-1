@@ -2,11 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dexlpc5fdvfff" path="res://Assets/DEV/DEV_background.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://vmtniiwn1oht" path="res://Scenes/Player.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://bmc6vdmlblsmg" path="res://Assets/Sprites/Dam.png" id="2_8gbba"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
-size = Vector2(651, 812)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kyqiw"]
+points = PackedVector2Array(195, 498, 766, 498, 763, 393, 628, 389, 624, 307, 195, 299)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
 size = Vector2(635, 789)
@@ -14,6 +15,7 @@ size = Vector2(635, 789)
 [node name="Node2D" type="Node2D" unique_id=1050794869]
 
 [node name="DevBackground" type="Sprite2D" parent="." unique_id=666079147]
+z_index = -100
 texture_repeat = 2
 position = Vector2(624.25, 348.5)
 scale = Vector2(24.74219, 14.390625)
@@ -30,6 +32,12 @@ debug_color = Color(0.9999998, 0.0024176077, 0.09460204, 0.41960785)
 editor_description = "0,0 offset (640, 360) @ scale = 1"
 position = Vector2(640, 360)
 
+[node name="Dam" type="Sprite2D" parent="." unique_id=1435298071]
+z_index = -90
+position = Vector2(378, 205)
+scale = Vector2(6, 6)
+texture = ExtResource("2_8gbba")
+
 [node name="Air" type="Area2D" parent="." unique_id=957781194]
 editor_description = "AIR"
 collision_layer = 2
@@ -37,11 +45,11 @@ collision_mask = 0
 metadata/isAir = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Air" unique_id=1285172597]
-position = Vector2(315.5, 396)
-shape = SubResource("RectangleShape2D_sj43t")
+shape = SubResource("ConvexPolygonShape2D_kyqiw")
 debug_color = Color(1, 1, 1, 0.41960785)
 
 [node name="Water" type="Area2D" parent="." unique_id=1136233369]
+position = Vector2(121, -14)
 collision_layer = 2
 collision_mask = 0
 metadata/isAir = false
@@ -52,5 +60,4 @@ shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
-position = Vector2(161, 158)
-platform_floor_layers = 4294967040
+position = Vector2(173, 184)
