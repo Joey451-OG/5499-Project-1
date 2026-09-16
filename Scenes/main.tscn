@@ -12,7 +12,10 @@
 points = PackedVector2Array(195, 498, 766, 498, 763, 393, 628, 389, 624, 307, 195, 299)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
-size = Vector2(635, 789)
+size = Vector2(1826, 789)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kry3j"]
+size = Vector2(1292, 730)
 
 [node name="Node2D" type="Node2D" unique_id=1050794869]
 
@@ -53,16 +56,36 @@ collision_mask = 0
 metadata/isAir = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water" unique_id=321074166]
-position = Vector2(969.5, 384.5)
+position = Vector2(1565, 384.5)
 shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(173, 184)
 collision_mask = 7
+item_slow_percent = 0.35
 
 [node name="Pickup" parent="." unique_id=529543630 instance=ExtResource("4_jjvhh")]
 position = Vector2(1210, 558)
 
 [node name="Camera" parent="." unique_id=937009256 instance=ExtResource("5_kry3j")]
 position = Vector2(640, 363)
+
+[node name="CollisionShape2D" parent="Camera/cameraZone" parent_id_path=PackedInt32Array(937009256, 384282297) index="0" unique_id=1106377674]
+position = Vector2(-1, -4)
+shape = SubResource("RectangleShape2D_kry3j")
+
+[node name="Pickup" parent="Camera/cameraZone" parent_id_path=PackedInt32Array(937009256, 384282297) index="1" unique_id=1646626332 instance=ExtResource("4_jjvhh")]
+position = Vector2(328, 105)
+
+[node name="Pickup2" parent="Camera/cameraZone" parent_id_path=PackedInt32Array(937009256, 384282297) index="2" unique_id=811996773 instance=ExtResource("4_jjvhh")]
+position = Vector2(417, -138)
+
+[node name="Pickup3" parent="Camera/cameraZone" parent_id_path=PackedInt32Array(937009256, 384282297) index="3" unique_id=217502140 instance=ExtResource("4_jjvhh")]
+position = Vector2(941, 144)
+
+[node name="Camera2" parent="." unique_id=2080477732 instance=ExtResource("5_kry3j")]
+position = Vector2(1942, 360)
+
+[editable path="Camera"]
+[editable path="Camera2"]
