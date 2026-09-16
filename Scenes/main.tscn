@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dexlpc5fdvfff" path="res://Assets/DEV/DEV_background.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://vmtniiwn1oht" path="res://Scenes/Player.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bmc6vdmlblsmg" path="res://Assets/Sprites/Dam.png" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://daf1lqeei17tk" path="res://Scenes/pickup.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://diyouch7u68xr" path="res://Scenes/camera.tscn" id="5_kry3j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -27,10 +29,6 @@ rotation = -3.1415927
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World Border" unique_id=72585754]
 shape = SubResource("WorldBoundaryShape2D_kyqiw")
 debug_color = Color(0.9999998, 0.0024176077, 0.09460204, 0.41960785)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=179472342]
-editor_description = "0,0 offset (640, 360) @ scale = 1"
-position = Vector2(640, 360)
 
 [node name="Dam" type="Sprite2D" parent="." unique_id=1435298071]
 z_index = -90
@@ -61,3 +59,10 @@ debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(173, 184)
+collision_mask = 7
+
+[node name="Pickup" parent="." unique_id=529543630 instance=ExtResource("4_jjvhh")]
+position = Vector2(1210, 558)
+
+[node name="Camera" parent="." unique_id=937009256 instance=ExtResource("5_kry3j")]
+position = Vector2(640, 363)

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://diyouch7u68xr"]
+
+[ext_resource type="Script" uid="uid://bc3wtt08gw5yl" path="res://Scripts/gdscript/camera.gd" id="1_375tr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
+size = Vector2(1293, 739)
+
+[node name="Camera" type="Node2D" unique_id=937009256]
+script = ExtResource("1_375tr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=732633423]
+position_smoothing_enabled = true
+
+[node name="cameraZone" type="Area2D" parent="." unique_id=384282297]
+collision_layer = 0
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cameraZone" unique_id=1106377674]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_sj43t")
+debug_color = Color(0.77254903, 0.44313726, 0, 0.18039216)
+
+[connection signal="area_entered" from="cameraZone" to="." method="_on_camera_zone_area_entered"]
+[connection signal="area_exited" from="cameraZone" to="." method="_on_camera_zone_area_exited"]

@@ -52,3 +52,6 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 	if area.has_meta("isAir"):
 		isUnderWater = !area.get_meta("isAir")
 		print(isUnderWater)
+		
+	if area.has_meta("isPickup"):
+		print("Touched Pickup!")
