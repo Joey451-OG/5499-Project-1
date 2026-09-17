@@ -39,12 +39,11 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = transform.x * Input.get_action_strength("swim") * VELCOCITY_IMPULSE
 	
+	if velocity > Vector2.ZERO and Globals.p_state != Globals.PlayerState.SWIMING:
+		Globals.p_state = Globals.PlayerState.SWIMING
+	
 	if pickup != null:
 		velocity *= 1 - item_slow_percent
-	#sinking
-	#if not Input.is_action_pressed("swim"):
-		#velocity.y += VELCOCITY_IMPULSE * 0.5
-		
 
 	move_and_slide()
 
@@ -55,6 +54,7 @@ func is_in_range(value: float, min: float, max: float) -> bool:
 
 func _on_lung_timer_timeout() -> void:
 	print("[LUNG TIMER]: Player Drowned!")
+	Globals.p_state = Globals.PlayerState.DROWNED
 
 func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 	if area.has_meta("isAir"):
@@ -70,5 +70,3 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 		print("Touched Pickup!")
 		area.disable_mode = CollisionObject2D.DISABLE_MODE_REMOVE
 		pickup = area.get_parent()
-		
-		

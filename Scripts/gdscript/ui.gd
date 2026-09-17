@@ -1,16 +1,26 @@
 extends CanvasLayer
-@onready var score: Label = $MarginContainer/Score
 
 @export var score_text := "Score: %d"
+@onready var end_score: Label = $"EndScreen/Panel/End Score"
+@onready var score: Label = $Normal/Score
+@onready var normal: MarginContainer = $Normal
+@onready var end_screen: MarginContainer = $EndScreen
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	score.text = score_text % Globals.points
+	normal.show()
+	end_screen.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	score.text = score_text % Globals.points
 	
-	var camera := get_viewport()
-	reparent(camera, false)
+	if Globals.p_state == Globals.PlayerState.DROWNED:
+		normal.hide()
+		end_screen.show()
+		end_score.text = score.text
+		
+		
+	

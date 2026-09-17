@@ -7,10 +7,15 @@
 font = ExtResource("1_w371h")
 font_size = 42
 
+[sub_resource type="LabelSettings" id="LabelSettings_i58cg"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_sdogw"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1794298050]
 script = ExtResource("1_nxvpl")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1198342830]
+[node name="Normal" type="MarginContainer" parent="." unique_id=1198342830]
 custom_minimum_size = Vector2(1280, 720)
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,10 +28,57 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Score" type="Label" parent="MarginContainer" unique_id=1106624337]
+[node name="Score" type="Label" parent="Normal" unique_id=1106624337]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 offset_transform_enabled = true
 text = "Score: 999"
 label_settings = SubResource("LabelSettings_sj43t")
+
+[node name="EndScreen" type="MarginContainer" parent="." unique_id=560313310]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="EndScreen" unique_id=1616109898]
+layout_mode = 2
+
+[node name="You Drowned" type="Label" parent="EndScreen/Panel" unique_id=1832792864]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Drowned!"
+label_settings = SubResource("LabelSettings_i58cg")
+
+[node name="End Score" type="Label" parent="EndScreen/Panel" unique_id=64450741]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = 26.0
+offset_right = 39.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score 999"
+label_settings = SubResource("LabelSettings_sdogw")
+horizontal_alignment = 1
