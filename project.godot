@@ -37,6 +37,10 @@ swim={
 ]
 }
 
+[internationalization]
+
+rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
