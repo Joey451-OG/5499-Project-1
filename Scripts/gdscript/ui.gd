@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 @onready var score: Label = $MarginContainer/Score
 
 @export var score_text := "Score: %d"
@@ -12,5 +12,5 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	score.text = score_text % Globals.points
 	
-	var camera = get_viewport()
-	reparent(camera)
+	var camera := get_viewport()
+	reparent(camera, false)

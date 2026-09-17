@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bmc6vdmlblsmg" path="res://Assets/Sprites/Dam.png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://daf1lqeei17tk" path="res://Scenes/pickup.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://diyouch7u68xr" path="res://Scenes/camera.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bll36qhd70xjd" path="res://Scenes/UI.tscn" id="6_21xkr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -97,6 +98,8 @@ metadata/isAir = false
 position = Vector2(1565, 384.5)
 shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
+
+[node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
