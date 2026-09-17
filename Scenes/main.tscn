@@ -29,7 +29,7 @@ debug_color = Color(0.9999998, 0.0024176077, 0.09460204, 0.41960785)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions and Walls/DamBoundingBox" unique_id=1107835129]
 position = Vector2(173, 285)
-polygon = PackedVector2Array(1, -2, 454, -1, 466, 91, 587, 89, 243, -274, -166, -276, -171, 429, 593, 424, 587, 224, 2, 226)
+polygon = PackedVector2Array(-14, -56, -148, -128, -146, -227, 34, -263, 131, -205, 138, -107, 138, 4, 454, -1, 466, 91, 587, 89, 243, -274, -166, -276, -171, 429, 593, 424, 587, 224, 2, 226)
 
 [node name="DevBackground" type="Sprite2D" parent="." unique_id=666079147]
 z_index = -100
@@ -85,7 +85,7 @@ metadata/isAir = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Air" unique_id=1854456626]
 position = Vector2(214, 355)
-polygon = PackedVector2Array(551, 26, 421, 26, 414, -56, -33, -58, -27, 149, 555, 148)
+polygon = PackedVector2Array(551, 26, 421, 26, 414, -56, 97, -57, 88, -227, 82, -277, -4, -323, -86, -311, -122, -298, -167, -274, -178, -210, -42, -146, -33, -58, -27, 149, 555, 148)
 
 [node name="Water" type="Area2D" parent="Areas" unique_id=1136233369]
 position = Vector2(121, -14)
