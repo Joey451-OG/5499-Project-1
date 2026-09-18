@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dkn6gt8kw8skt" path="res://Scenes/Env.tscn" id="6_d1ilt"]
 [ext_resource type="Texture2D" uid="uid://yjwcn8nwa136" path="res://Assets/Sprites/Base_Env_Tile.png" id="7_6iyac"]
 [ext_resource type="Texture2D" uid="uid://de7nmstmvoo6l" path="res://Assets/Sprites/Connecting_Env_Tile.png" id="7_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://db0ykjnmxhywr" path="res://Assets/Sprites/Connecting_Ground_Tile.png" id="9_fdnlq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -146,6 +147,49 @@ scale = Vector2(3.12, 1)
 texture = ExtResource("7_d1ilt")
 state = 2
 
+[node name="Ground" type="Node" parent="Textures/Enviroment" unique_id=1972916572]
+
+[node name="Env" parent="Textures/Enviroment/Ground" unique_id=175000143 instance=ExtResource("6_d1ilt")]
+position = Vector2(791, 845)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env2" parent="Textures/Enviroment/Ground" unique_id=1273346858 instance=ExtResource("6_d1ilt")]
+position = Vector2(950, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env3" parent="Textures/Enviroment/Ground" unique_id=109221274 instance=ExtResource("6_d1ilt")]
+position = Vector2(1163, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env4" parent="Textures/Enviroment/Ground" unique_id=590608450 instance=ExtResource("6_d1ilt")]
+position = Vector2(1404, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env5" parent="Textures/Enviroment/Ground" unique_id=451348698 instance=ExtResource("6_d1ilt")]
+position = Vector2(1597, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env6" parent="Textures/Enviroment/Ground" unique_id=1671095431 instance=ExtResource("6_d1ilt")]
+position = Vector2(1790, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
+[node name="Env7" parent="Textures/Enviroment/Ground" unique_id=816203948 instance=ExtResource("6_d1ilt")]
+position = Vector2(2022, 845)
+scale = Vector2(4.12, 1)
+texture = ExtResource("9_fdnlq")
+state = 3
+
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(293, 419)
 collision_mask = 7
@@ -170,16 +214,24 @@ shape = SubResource("RectangleShape2D_ynf5e")
 [node name="Pickups" type="Node" parent="." unique_id=1078304600]
 
 [node name="Pickup" parent="Pickups" unique_id=529543630 instance=ExtResource("4_jjvhh")]
-position = Vector2(1210, 558)
+position = Vector2(1591, 182)
+
+[node name="Pickup5" parent="Pickups" unique_id=428159123 instance=ExtResource("4_jjvhh")]
+position = Vector2(1844, 797)
+
+[node name="Pickup6" parent="Pickups" unique_id=1837113721 instance=ExtResource("4_jjvhh")]
+position = Vector2(1263, 797)
 
 [node name="Pickup2" parent="Pickups" unique_id=1646626332 instance=ExtResource("4_jjvhh")]
-position = Vector2(968, 468)
+position = Vector2(2137, 193)
 
 [node name="Pickup3" parent="Pickups" unique_id=811996773 instance=ExtResource("4_jjvhh")]
-position = Vector2(1057, 225)
+position = Vector2(1455, 278.99997)
+rotation = 1.3089969
 
 [node name="Pickup4" parent="Pickups" unique_id=217502140 instance=ExtResource("4_jjvhh")]
-position = Vector2(1581, 507)
+position = Vector2(1744, 277)
+rotation = 1.5707964
 
 [node name="Areas" type="Node" parent="." unique_id=1348208264]
 
@@ -205,7 +257,6 @@ shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
-visible = false
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
