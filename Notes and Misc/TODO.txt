@@ -1,0 +1,25 @@
+TODO:
+	- Level design
+	- Powerups
+		- Swim faster
+		- Higher lung capacity
+
+Ideas:
+What if you could use the sticks to get powerups? (Unlockable progression)
+	- x sticks to get speed
+	- x + y sticks to get lung capacity (though you keep the x from eariler)
+	- 
+
+Rubric Items:
+	[x] - Game is playable on Dr. Walter's Hardware
+	[x] - Game is 2D and made in Godot
+	[] - Game Levels show progression in learning
+	[] - Game takes 5 - 10 minutes to play
+	[] - Game is fun to play
+	
+	Write up items:
+	[] - Description of what the game is teaching
+	[] - Description of core mechanics and how to play
+	[] - Defined Rules
+	[] - Game Concept / Genere and background described
+	[] - Description of what changed between itterations

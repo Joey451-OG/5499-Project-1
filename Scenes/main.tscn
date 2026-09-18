@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cx1jv6jad3xxh"]
 
+[ext_resource type="Texture2D" uid="uid://dom2h2urd8ojc" path="res://Assets/Sprites/Ice_Sheet.png" id="1_344ge"]
 [ext_resource type="Texture2D" uid="uid://dexlpc5fdvfff" path="res://Assets/DEV/DEV_background.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://vmtniiwn1oht" path="res://Scenes/Player.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bmc6vdmlblsmg" path="res://Assets/Sprites/Dam.png" id="2_8gbba"]
+[ext_resource type="Texture2D" uid="uid://bh4fdkjjx246d" path="res://Assets/Sprites/Dam_base.png" id="3_6bp64"]
 [ext_resource type="PackedScene" uid="uid://daf1lqeei17tk" path="res://Scenes/pickup.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://diyouch7u68xr" path="res://Scenes/camera.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://bll36qhd70xjd" path="res://Scenes/UI.tscn" id="6_21xkr"]
@@ -16,6 +18,15 @@ size = Vector2(1292, 730)
 size = Vector2(1826, 789)
 
 [node name="Node2D" type="Node2D" unique_id=1050794869]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1295081621]
+z_index = 1
+texture_repeat = 2
+scale = Vector2(4, 4)
+points = PackedVector2Array(-500, 0, 2755, 0)
+width = 32.0
+texture = ExtResource("1_344ge")
+texture_mode = 1
 
 [node name="Collisions and Walls" type="Node" parent="." unique_id=1320735938]
 
@@ -39,6 +50,12 @@ position = Vector2(624.25, 348.5)
 scale = Vector2(24.74219, 14.390625)
 texture = ExtResource("1_bo1nx")
 
+[node name="DamBase" type="Sprite2D" parent="." unique_id=1632950278]
+z_index = -90
+position = Vector2(378, 498.99994)
+scale = Vector2(6.015625, 5.9062505)
+texture = ExtResource("3_6bp64")
+
 [node name="Dam" type="Sprite2D" parent="." unique_id=1435298071]
 z_index = -90
 position = Vector2(378, 205)
@@ -56,7 +73,7 @@ item_slow_percent = 0.35
 position = Vector2(640, 363)
 
 [node name="CollisionShape2D" parent="Cameras/Camera/cameraZone" parent_id_path=PackedInt32Array(937009256, 384282297) index="0" unique_id=1106377674]
-position = Vector2(2, -12)
+position = Vector2(2, -18)
 shape = SubResource("RectangleShape2D_kry3j")
 
 [node name="Camera2" parent="Cameras" unique_id=2080477732 instance=ExtResource("5_kry3j")]
@@ -100,6 +117,7 @@ shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
+visible = false
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
