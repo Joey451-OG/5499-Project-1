@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func start_indicator():
 	for key in ability_unlock_sticks.keys():
-		if Globals.points >= ability_unlock_sticks[key]:
+		if Globals.points >= ability_unlock_sticks[key] and !Globals.current_abilities[key]:
 			animated_sprite_2d.play("indicating")
 			continue
 

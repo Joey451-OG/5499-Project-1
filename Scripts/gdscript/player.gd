@@ -15,6 +15,11 @@ var pickup : Node2D = null
 @onready var interacting_hit_box: Area2D = $interactingHitBox
 
 func _process(delta: float) -> void:
+
+	#print(sprite.get_rect().has_point(to_local(get_global_mouse_position())))
+	if not sprite.get_rect().has_point(to_local(get_global_mouse_position())):
+		look_at(get_global_mouse_position())
+
 	if pickup != null:
 		pickup.global_position = item_pivot.global_position
 	
@@ -42,9 +47,6 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	
-	#print(sprite.get_rect().has_point(to_local(get_global_mouse_position())))
-	if not sprite.get_rect().has_point(to_local(get_global_mouse_position())):
-		look_at(get_global_mouse_position())
 	
 	velocity = transform.x * Input.get_action_strength("swim") * SPEED
 	if Globals.current_abilities["speed"]:
