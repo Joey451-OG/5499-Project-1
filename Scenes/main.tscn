@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://diyouch7u68xr" path="res://Scenes/camera.tscn" id="5_kry3j"]
 [ext_resource type="Texture2D" uid="uid://1bkvm650ok3h" path="res://Assets/DEV/DEV_sky_blue.png" id="5_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bll36qhd70xjd" path="res://Scenes/UI.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dkn6gt8kw8skt" path="res://Scenes/Env.tscn" id="6_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://yjwcn8nwa136" path="res://Assets/Sprites/Base_Env_Tile.png" id="7_6iyac"]
+[ext_resource type="Texture2D" uid="uid://de7nmstmvoo6l" path="res://Assets/Sprites/Connecting_Env_Tile.png" id="7_d1ilt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -79,6 +82,70 @@ position = Vector2(570.5, -712.3366)
 scale = Vector2(64.42188, 22.541767)
 texture = ExtResource("5_ynf5e")
 
+[node name="Enviroment" type="Node" parent="Textures" unique_id=322227639]
+
+[node name="L" type="Node" parent="Textures/Enviroment" unique_id=503111215]
+
+[node name="Env" parent="Textures/Enviroment/L" unique_id=1860050707 instance=ExtResource("6_d1ilt")]
+position = Vector2(1315, 253)
+texture = ExtResource("7_6iyac")
+state = 1
+
+[node name="Env2" parent="Textures/Enviroment/L" unique_id=1118356646 instance=ExtResource("6_d1ilt")]
+position = Vector2(1428, 253)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env3" parent="Textures/Enviroment/L" unique_id=2007595054 instance=ExtResource("6_d1ilt")]
+position = Vector2(1587, 253)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env4" parent="Textures/Enviroment/L" unique_id=254697600 instance=ExtResource("6_d1ilt")]
+position = Vector2(1757, 253)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env5" parent="Textures/Enviroment/L" unique_id=1816440266 instance=ExtResource("6_d1ilt")]
+position = Vector2(1920, 253)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env7" parent="Textures/Enviroment/L" unique_id=1755617642 instance=ExtResource("6_d1ilt")]
+position = Vector2(2306, 253)
+texture = ExtResource("7_6iyac")
+state = 1
+
+[node name="Env6" parent="Textures/Enviroment/L" unique_id=1744379965 instance=ExtResource("6_d1ilt")]
+position = Vector2(2086, 254)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env10" parent="Textures/Enviroment/L" unique_id=1503461239 instance=ExtResource("6_d1ilt")]
+position = Vector2(2195, 253)
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env8" parent="Textures/Enviroment/L" unique_id=163535425 instance=ExtResource("6_d1ilt")]
+position = Vector2(2306, 129)
+rotation = 1.5707964
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
+[node name="Env9" parent="Textures/Enviroment/L" unique_id=1727280914 instance=ExtResource("6_d1ilt")]
+position = Vector2(2306, 63)
+rotation = 1.5707964
+scale = Vector2(3.12, 1)
+texture = ExtResource("7_d1ilt")
+state = 2
+
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(293, 419)
 collision_mask = 7
@@ -138,6 +205,7 @@ shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
+visible = false
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
