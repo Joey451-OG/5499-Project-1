@@ -17,5 +17,5 @@ var current_abilities := {
 
 var ability_modifiers := {
 	"speed" : 1.5,
-	"higher_lc" : 1.5,
+	"higher_lc" : 2,
 }

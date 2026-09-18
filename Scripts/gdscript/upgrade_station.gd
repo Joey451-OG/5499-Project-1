@@ -1,7 +1,7 @@
 extends Sprite2D
 var ability_unlock_sticks = {
-	"speed": 5,
-	"higher_lc": 10000
+	"speed": 10000,
+	"higher_lc": 5
 }
 var isIndicatorActive : bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
