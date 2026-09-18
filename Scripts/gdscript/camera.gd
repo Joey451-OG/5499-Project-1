@@ -45,9 +45,9 @@ func set_camera_limits_to_polygon(camera: Camera2D) -> void:
 	camera.limit_bottom = int(max_y + overhang)
 
 func _on_camera_zone_area_entered(area: Area2D) -> void:
-	print("[Camera]: DETECTED PLAYER")
+	print("[camera.gd]: DETECTED PLAYER")
 	player = area.get_parent()
 
 func _on_camera_zone_area_exited(area: Area2D) -> void:
-	print("[Camera]: DETECTED PLAYER LEAVING")
+	print("[camera.gd]: DETECTED PLAYER LEAVING")
 	player = null

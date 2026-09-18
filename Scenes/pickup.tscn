@@ -6,11 +6,13 @@
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=932758316]
 modulate = Color(0.019607844, 0.019607844, 0.019607844, 0.28235295)
+z_index = 1
 position = Vector2(50.000004, -56.000004)
 scale = Vector2(2.135, 2.135)
 texture = ExtResource("1_v7u4w")
 
-[node name="DevStick" type="Sprite2D" parent="." unique_id=198541030]
+[node name="Stick" type="Sprite2D" parent="." unique_id=198541030]
+z_index = 1
 position = Vector2(59, -57)
 scale = Vector2(2, 2)
 texture = ExtResource("1_v7u4w")

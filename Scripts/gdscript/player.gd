@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var VELCOCITY_IMPULSE := 300.0
+@export var SPEED := 300.0
 @export var DRAG := 1.1
 @export var lung_capacity_in_seconds := 10
 @export var item_slow_percent : float = 0.5
@@ -24,6 +24,9 @@ func _process(delta: float) -> void:
 		sprite.scale.y = -sprite.scale.y
 	
 	if lung_timer.is_stopped() and isUnderWater:
+		if Globals.current_abilities["higher_lc"]:
+			lung_capacity_in_seconds *= Globals.ability_modifiers["higher_lc"]
+		
 		lung_timer.start(lung_capacity_in_seconds)
 	
 	if not isUnderWater and !lung_timer.is_stopped():
@@ -34,7 +37,7 @@ func _process(delta: float) -> void:
 	for area in interacting_hit_box.get_overlapping_areas():
 		if area.has_meta("isAir"):
 			isUnderWater = !area.get_meta("isAir")
-			print(isUnderWater)
+			#print(isUnderWater)
 			
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -43,7 +46,9 @@ func _physics_process(delta: float) -> void:
 	if not sprite.get_rect().has_point(to_local(get_global_mouse_position())):
 		look_at(get_global_mouse_position())
 	
-	velocity = transform.x * Input.get_action_strength("swim") * VELCOCITY_IMPULSE
+	velocity = transform.x * Input.get_action_strength("swim") * SPEED
+	if Globals.current_abilities["speed"]:
+		velocity *= Globals.ability_modifiers["speed"]
 	
 	if velocity > Vector2.ZERO and Globals.p_state != Globals.PlayerState.SWIMING:
 		Globals.p_state = Globals.PlayerState.SWIMING
@@ -59,7 +64,7 @@ func is_in_range(value: float, min: float, max: float) -> bool:
 	return min < value and value < max
 
 func _on_lung_timer_timeout() -> void:
-	print("[LUNG TIMER]: Player Drowned!")
+	print("[LUNG TIMER | player.gd]: Player Drowned!")
 	Globals.p_state = Globals.PlayerState.DROWNED
 
 func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
@@ -67,9 +72,9 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 		if pickup != null and area.get_meta("isAir"):
 			pickup.queue_free()
 			Globals.points += 1
-			print("PLAYER SCORED points: %d" % Globals.points)
+			print("[player.gd]: PLAYER SCORED points: %d" % Globals.points)
 		
 	if area.has_meta("isPickup"):
-		print("Touched Pickup!")
+		print("[player.gd]: Touched Pickup!")
 		area.disable_mode = CollisionObject2D.DISABLE_MODE_REMOVE
 		pickup = area.get_parent()
