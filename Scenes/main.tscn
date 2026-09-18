@@ -19,7 +19,7 @@ size = Vector2(2045, 866)
 size = Vector2(1812, 857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
-size = Vector2(1826, 789)
+size = Vector2(1835, 789)
 
 [node name="Node2D" type="Node2D" unique_id=1050794869]
 
@@ -133,7 +133,7 @@ collision_mask = 0
 metadata/isAir = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Water" unique_id=321074166]
-position = Vector2(1565, 384.5)
+position = Vector2(1560.5, 384.5)
 shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 

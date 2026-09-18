@@ -12,6 +12,7 @@ var pickup : Node2D = null
 @onready var lung_timer: Timer = $lungTimer
 @onready var lung_indicator: Line2D = $Sprite2D/lungIndicator
 @onready var item_pivot: Node2D = $Sprite2D/ItemPivot
+@onready var interacting_hit_box: Area2D = $interactingHitBox
 
 func _process(delta: float) -> void:
 	if pickup != null:
@@ -29,7 +30,12 @@ func _process(delta: float) -> void:
 		lung_timer.stop()
 	
 	lung_indicator.scale.x = 1 - (( lung_timer.wait_time - lung_timer.time_left ) / lung_timer.wait_time)
-
+	
+	for area in interacting_hit_box.get_overlapping_areas():
+		if area.has_meta("isAir"):
+			isUnderWater = !area.get_meta("isAir")
+			print(isUnderWater)
+			
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	
@@ -57,10 +63,7 @@ func _on_lung_timer_timeout() -> void:
 	Globals.p_state = Globals.PlayerState.DROWNED
 
 func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
-	if area.has_meta("isAir"):
-		isUnderWater = !area.get_meta("isAir")
-		print(isUnderWater)
-		
+	if area.has_meta("isAir"):	
 		if pickup != null and area.get_meta("isAir"):
 			pickup.queue_free()
 			Globals.points += 1

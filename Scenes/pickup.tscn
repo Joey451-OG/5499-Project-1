@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cl857v0c1a42t" path="res://Assets/Sprites/stick.png" id="1_v7u4w"]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_kry3j"]
-points = PackedVector2Array(19, 16, 112, -50, 80, -94, -14, 4)
-
 [node name="Pickup" type="Node2D" unique_id=529543630]
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=932758316]
@@ -19,11 +16,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_v7u4w")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1318114309]
-visible = false
 collision_layer = 4
 collision_mask = 4
 metadata/isPickup = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=81101966]
-shape = SubResource("ConvexPolygonShape2D_kry3j")
-debug_color = Color(0.9440774, 7.412136e-06, 0.6009741, 0.41960785)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=75916714]
+position = Vector2(-13, 4)
+polygon = PackedVector2Array(0, 0, 32, 13, 125, -55, 92, -99)
