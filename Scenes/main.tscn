@@ -26,7 +26,7 @@ size = Vector2(2045, 866)
 size = Vector2(1343, 857)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
-size = Vector2(1470, 836)
+size = Vector2(1454, 836)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
 size = Vector2(1835, 789)
@@ -257,8 +257,31 @@ position = Vector2(3943, 845)
 texture = ExtResource("10_k12tt")
 state = 3
 
+[node name="Env20" parent="Textures/Enviroment/Ground" unique_id=670871832 instance=ExtResource("6_d1ilt")]
+position = Vector2(4572, 845)
+texture = ExtResource("10_k12tt")
+state = 3
+
 [node name="Env15" parent="Textures/Enviroment/Ground" unique_id=354502817 instance=ExtResource("6_d1ilt")]
 position = Vector2(3856.58, 845)
+scale = Vector2(2.5756207, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env17" parent="Textures/Enviroment/Ground" unique_id=2144397683 instance=ExtResource("6_d1ilt")]
+position = Vector2(4667, 845)
+scale = Vector2(2.5756207, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env18" parent="Textures/Enviroment/Ground" unique_id=393245479 instance=ExtResource("6_d1ilt")]
+position = Vector2(4801, 845)
+scale = Vector2(2.5756207, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env19" parent="Textures/Enviroment/Ground" unique_id=629304155 instance=ExtResource("6_d1ilt")]
+position = Vector2(4931, 845)
 scale = Vector2(2.5756207, 1)
 texture = ExtResource("9_fdnlq")
 state = 4
@@ -360,6 +383,45 @@ scale = Vector2(1.8638818, 5.796247)
 texture = ExtResource("11_h1bgf")
 state = 8
 
+[node name="scr2_top_right" type="Node" parent="Textures/Enviroment" unique_id=1578762686]
+
+[node name="Env" parent="Textures/Enviroment/scr2_top_right" unique_id=1685595258 instance=ExtResource("6_d1ilt")]
+position = Vector2(4758.5, 148.49998)
+scale = Vector2(6.359374, 8.265624)
+texture = ExtResource("7_6iyac")
+state = 1
+
+[node name="scr2_bottom_right_nook" type="Node" parent="Textures/Enviroment" unique_id=651537506]
+
+[node name="Env2" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=2115504640 instance=ExtResource("6_d1ilt")]
+position = Vector2(4572, 588)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env4" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=315716294 instance=ExtResource("6_d1ilt")]
+position = Vector2(4302, 588)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env5" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=1674772309 instance=ExtResource("6_d1ilt")]
+position = Vector2(5072, 539)
+scale = Vector2(3.6874967, 10.5)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env3" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=97483593 instance=ExtResource("6_d1ilt")]
+position = Vector2(4442, 588)
+scale = Vector2(3.8750045, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=682914665 instance=ExtResource("6_d1ilt")]
+position = Vector2(4572, 718.0874)
+rotation = 1.5707964
+scale = Vector2(3.4972677, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(293, 419)
 collision_mask = 7
@@ -385,7 +447,7 @@ shape = SubResource("RectangleShape2D_ynf5e")
 position = Vector2(4086, 473)
 
 [node name="CollisionShape2D" parent="Cameras/Camera3/cameraZone" parent_id_path=PackedInt32Array(92903342, 384282297) index="0" unique_id=1106377674]
-position = Vector2(84, -46)
+position = Vector2(76, -46)
 shape = SubResource("RectangleShape2D_k12tt")
 
 [node name="Pickups" type="Node" parent="." unique_id=1078304600]
@@ -431,6 +493,14 @@ position = Vector2(3878, 811)
 [node name="Pickup13" parent="Pickups" unique_id=1533497474 instance=ExtResource("4_jjvhh")]
 position = Vector2(3644, 207.99997)
 rotation = 1.6826059
+
+[node name="Pickup14" parent="Pickups" unique_id=1938440208 instance=ExtResource("4_jjvhh")]
+position = Vector2(4380, 621)
+rotation = 1.572916
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Pickup15" parent="Pickups" unique_id=1503886419 instance=ExtResource("4_jjvhh")]
+position = Vector2(4773, 813)
 
 [node name="Areas" type="Node" parent="." unique_id=1348208264]
 

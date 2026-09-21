@@ -1,6 +1,6 @@
 extends Sprite2D
 var ability_unlock_sticks = {
-	"speed": 10000,
+	"speed": 15,
 	"higher_lc": 5
 }
 var isIndicatorActive : bool = false
