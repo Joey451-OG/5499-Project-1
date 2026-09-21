@@ -386,8 +386,8 @@ state = 8
 [node name="scr2_top_right" type="Node" parent="Textures/Enviroment" unique_id=1578762686]
 
 [node name="Env" parent="Textures/Enviroment/scr2_top_right" unique_id=1685595258 instance=ExtResource("6_d1ilt")]
-position = Vector2(4758.5, 148.49998)
-scale = Vector2(6.359374, 8.265624)
+position = Vector2(4889, 148.49998)
+scale = Vector2(10.437496, 8.265624)
 texture = ExtResource("7_6iyac")
 state = 1
 
@@ -404,8 +404,8 @@ texture = ExtResource("10_k12tt")
 state = 3
 
 [node name="Env5" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=1674772309 instance=ExtResource("6_d1ilt")]
-position = Vector2(5072, 539)
-scale = Vector2(3.6874967, 10.5)
+position = Vector2(5060.5, 599.5)
+scale = Vector2(4.046872, 8.609374)
 texture = ExtResource("10_k12tt")
 state = 3
 
@@ -425,6 +425,7 @@ state = 4
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(293, 419)
 collision_mask = 7
+LUNG_CAPACITY_IN_SECONDS = 15
 item_slow_percent = 0.35
 
 [node name="Cameras" type="Node" parent="." unique_id=1237047510]

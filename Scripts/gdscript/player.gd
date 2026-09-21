@@ -2,17 +2,21 @@ extends CharacterBody2D
 
 @export var SPEED := 300.0
 @export var DRAG := 1.1
-@export var lung_capacity_in_seconds := 10
+@export var LUNG_CAPACITY_IN_SECONDS := 10
 @export var item_slow_percent : float = 0.5
 
 var isUnderWater := false
 var pickup : Node2D = null
+var current_lung_capacity_in_seconds
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var lung_timer: Timer = $lungTimer
 @onready var lung_indicator: Line2D = $Sprite2D/lungIndicator
 @onready var item_pivot: Node2D = $Sprite2D/ItemPivot
 @onready var interacting_hit_box: Area2D = $interactingHitBox
+
+func _ready() -> void:
+	current_lung_capacity_in_seconds = LUNG_CAPACITY_IN_SECONDS
 
 func _process(delta: float) -> void:
 
@@ -30,9 +34,10 @@ func _process(delta: float) -> void:
 	
 	if lung_timer.is_stopped() and isUnderWater:
 		if Globals.current_abilities["higher_lc"]:
-			lung_capacity_in_seconds *= Globals.ability_modifiers["higher_lc"]
+			current_lung_capacity_in_seconds = LUNG_CAPACITY_IN_SECONDS
+			current_lung_capacity_in_seconds *= Globals.ability_modifiers["higher_lc"]
 		
-		lung_timer.start(lung_capacity_in_seconds)
+		lung_timer.start(current_lung_capacity_in_seconds)
 	
 	if not isUnderWater and !lung_timer.is_stopped():
 		lung_timer.stop()
