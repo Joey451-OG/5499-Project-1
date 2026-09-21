@@ -57,8 +57,10 @@ func _physics_process(delta: float) -> void:
 	if Globals.current_abilities["speed"]:
 		velocity *= Globals.ability_modifiers["speed"]
 	
-	if velocity > Vector2.ZERO and Globals.p_state != Globals.PlayerState.SWIMING:
+	if isUnderWater and velocity > Vector2.ZERO and Globals.p_state != Globals.PlayerState.SWIMING:
 		Globals.p_state = Globals.PlayerState.SWIMING
+	elif not isUnderWater:
+		Globals.p_state = Globals.PlayerState.IDLE
 	
 	if pickup != null:
 		velocity *= 1 - item_slow_percent

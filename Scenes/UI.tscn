@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df07hyr5ykm40" path="res://Scripts/gdscript/ui.gd" id="1_nxvpl"]
 [ext_resource type="FontFile" uid="uid://bwoqe15k2n6sl" path="res://Assets/Fonts/Merienda/Merienda-Regular.ttf" id="1_w371h"]
+[ext_resource type="Shader" uid="uid://cgywowtwqxjo3" path="res://Scripts/gdshader/vignette.gdshader" id="3_dewlx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sj43t"]
 font = ExtResource("1_w371h")
@@ -11,6 +12,12 @@ font_size = 42
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_sdogw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sj43t"]
+shader = ExtResource("3_dewlx")
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.7
+shader_parameter/outer_radius = 1.5
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1794298050]
 script = ExtResource("1_nxvpl")
@@ -82,3 +89,11 @@ grow_vertical = 2
 text = "Score 999"
 label_settings = SubResource("LabelSettings_sdogw")
 horizontal_alignment = 1
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=692810200]
+material = SubResource("ShaderMaterial_sj43t")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

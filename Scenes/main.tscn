@@ -425,7 +425,7 @@ state = 4
 [node name="Player" parent="." unique_id=934692645 instance=ExtResource("1_jjgbg")]
 position = Vector2(293, 419)
 collision_mask = 7
-LUNG_CAPACITY_IN_SECONDS = 15
+LUNG_CAPACITY_IN_SECONDS = 12
 item_slow_percent = 0.35
 
 [node name="Cameras" type="Node" parent="." unique_id=1237047510]
