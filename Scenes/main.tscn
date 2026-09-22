@@ -10,8 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://1bkvm650ok3h" path="res://Assets/DEV/DEV_sky_blue.png" id="5_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bll36qhd70xjd" path="res://Scenes/UI.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dkn6gt8kw8skt" path="res://Scenes/Env.tscn" id="6_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://c08injccgitwd" path="res://Assets/Sprites/Depths_Background.png" id="6_fevyy"]
 [ext_resource type="Texture2D" uid="uid://yjwcn8nwa136" path="res://Assets/Sprites/Base_Env_Tile.png" id="7_6iyac"]
 [ext_resource type="Texture2D" uid="uid://de7nmstmvoo6l" path="res://Assets/Sprites/Connecting_Env_Tile.png" id="7_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://ckh4nyxf3lagh" path="res://Assets/Sprites/Depths_Dither.png" id="7_hibaj"]
 [ext_resource type="Texture2D" uid="uid://db0ykjnmxhywr" path="res://Assets/Sprites/Connecting_Ground_Tile.png" id="9_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://bn7h7bmv0h1d2" path="res://Assets/Sprites/Base_Ground_Tile.png" id="10_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cbjlpck3ewqkb" path="res://Assets/Sprites/Breakable_Connecting_Ground_Tile.png" id="11_h1bgf"]
@@ -80,29 +82,71 @@ texture = ExtResource("2_8gbba")
 
 [node name="Backgrounds" type="Node" parent="Textures" unique_id=1974255205]
 
-[node name="Background" type="Sprite2D" parent="Textures/Backgrounds" unique_id=377660274]
+[node name="DaylightZone" type="Node" parent="Textures/Backgrounds" unique_id=2079995272]
+
+[node name="Background" type="Sprite2D" parent="Textures/Backgrounds/DaylightZone" unique_id=377660274]
 z_index = -100
 position = Vector2(1125, 527)
 scale = Vector2(5.845, 5.845)
 texture = ExtResource("2_344ge")
 
-[node name="Background2" type="Sprite2D" parent="Textures/Backgrounds" unique_id=2124972268]
+[node name="Background2" type="Sprite2D" parent="Textures/Backgrounds/DaylightZone" unique_id=2124972268]
 z_index = -100
 position = Vector2(-1205, 527)
 scale = Vector2(5.845, 5.845)
 texture = ExtResource("2_344ge")
 
-[node name="Background3" type="Sprite2D" parent="Textures/Backgrounds" unique_id=70605107]
+[node name="Background3" type="Sprite2D" parent="Textures/Backgrounds/DaylightZone" unique_id=70605107]
 z_index = -100
 position = Vector2(3357.9995, 527)
 scale = Vector2(5.845, 5.845)
 texture = ExtResource("2_344ge")
 
-[node name="Background4" type="Sprite2D" parent="Textures/Backgrounds" unique_id=1097200077]
+[node name="Background4" type="Sprite2D" parent="Textures/Backgrounds/DaylightZone" unique_id=1097200077]
 z_index = -100
 position = Vector2(5684.0005, 527)
 scale = Vector2(5.845, 5.845)
 texture = ExtResource("2_344ge")
+
+[node name="TwilightZone" type="Node" parent="Textures/Backgrounds" unique_id=1844240022]
+
+[node name="DepthsBackground" type="Sprite2D" parent="Textures/Backgrounds/TwilightZone" unique_id=1078355574]
+z_index = -100
+position = Vector2(1251, 1411)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("6_fevyy")
+
+[node name="DepthsBackground4" type="Sprite2D" parent="Textures/Backgrounds/TwilightZone" unique_id=1452265982]
+z_index = -100
+position = Vector2(-970.9997, 1411.0001)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("6_fevyy")
+
+[node name="DepthsBackground2" type="Sprite2D" parent="Textures/Backgrounds/TwilightZone" unique_id=977641483]
+z_index = -100
+position = Vector2(3576.9998, 1411)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("6_fevyy")
+
+[node name="DepthsBackground3" type="Sprite2D" parent="Textures/Backgrounds/TwilightZone" unique_id=2080661427]
+z_index = -100
+position = Vector2(5903, 1411)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("6_fevyy")
+
+[node name="Depths Transition" type="Node" parent="Textures/Backgrounds" unique_id=376425108]
+
+[node name="DepthsDither" type="Sprite2D" parent="Textures/Backgrounds/Depths Transition" unique_id=571474659]
+z_index = -99
+position = Vector2(4162, 920)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("7_hibaj")
+
+[node name="DepthsDither2" type="Sprite2D" parent="Textures/Backgrounds/Depths Transition" unique_id=1290967181]
+z_index = -99
+position = Vector2(4361, 920)
+scale = Vector2(5.845, 5.845)
+texture = ExtResource("7_hibaj")
 
 [node name="Enviroment" type="Node" parent="Textures" unique_id=322227639]
 
