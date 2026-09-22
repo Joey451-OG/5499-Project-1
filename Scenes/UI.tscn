@@ -4,6 +4,12 @@
 [ext_resource type="FontFile" uid="uid://bwoqe15k2n6sl" path="res://Assets/Fonts/Merienda/Merienda-Regular.ttf" id="1_w371h"]
 [ext_resource type="Shader" uid="uid://cgywowtwqxjo3" path="res://Scripts/gdshader/vignette.gdshader" id="3_dewlx"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sj43t"]
+shader = ExtResource("3_dewlx")
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.7
+shader_parameter/outer_radius = 1.5
+
 [sub_resource type="LabelSettings" id="LabelSettings_sj43t"]
 font = ExtResource("1_w371h")
 font_size = 42
@@ -13,14 +19,16 @@ font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_sdogw"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sj43t"]
-shader = ExtResource("3_dewlx")
-shader_parameter/alpha = 0.5
-shader_parameter/inner_radius = 0.7
-shader_parameter/outer_radius = 1.5
-
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1794298050]
 script = ExtResource("1_nxvpl")
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=692810200]
+material = SubResource("ShaderMaterial_sj43t")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Normal" type="MarginContainer" parent="." unique_id=1198342830]
 custom_minimum_size = Vector2(1280, 720)
@@ -40,7 +48,16 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 offset_transform_enabled = true
-text = "Score: 999"
+text = "Sticks: 999"
+label_settings = SubResource("LabelSettings_sj43t")
+
+[node name="Next Upgrade" type="Label" parent="Normal" unique_id=1659543451]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 55)
+text = "Next upgrade: 999s."
 label_settings = SubResource("LabelSettings_sj43t")
 
 [node name="EndScreen" type="MarginContainer" parent="." unique_id=560313310]
@@ -89,11 +106,3 @@ grow_vertical = 2
 text = "Score 999"
 label_settings = SubResource("LabelSettings_sdogw")
 horizontal_alignment = 1
-
-[node name="Vignette" type="ColorRect" parent="." unique_id=692810200]
-material = SubResource("ShaderMaterial_sj43t")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2

@@ -1,8 +1,10 @@
 extends CanvasLayer
 
-@export var score_text := "Score: %d"
+@export var score_text := "Sticks: %d"
+@export var next_upgd_text := "Next upgrade: %d s."
 @onready var end_score: Label = $"EndScreen/Panel/End Score"
 @onready var score: Label = $Normal/Score
+@onready var next_upgrade: Label = $"Normal/Next Upgrade"
 @onready var normal: MarginContainer = $Normal
 @onready var end_screen: MarginContainer = $EndScreen
 @onready var vignette: ColorRect = $Vignette
@@ -13,6 +15,9 @@ func _ready() -> void:
 	normal.show()
 	end_screen.hide()
 	vignette.hide()
+	
+	Globals.pointsUntilUpdate.connect(_on_points_until_update)
+	_on_points_until_update()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,3 +35,6 @@ func _process(_delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.IDLE:
 		vignette.hide()
 	
+func _on_points_until_update():
+	#print("[ui.gd]: Points until next upgrade: %d" % Globals.points_until_next_upgrade)
+	next_upgrade.text = next_upgd_text % Globals.points_until_next_upgrade

@@ -1,6 +1,7 @@
 extends Node
 
 signal pointsUpdate
+signal pointsUntilUpdate
 
 enum PlayerState {IDLE, SWIMING, DROWNED}
 
@@ -9,10 +10,15 @@ var points := 0 :
 		points = value
 		emit_signal("pointsUpdate")
 
+var points_until_next_upgrade : int = 5:
+	set(value):
+		points_until_next_upgrade = value
+		emit_signal("pointsUntilUpdate")
+
 var p_state : PlayerState = PlayerState.IDLE
 var current_abilities := {
-	"speed" : false,
 	"higher_lc" : false, # Higher lung capacity
+	"speed" : false,
 }
 
 var ability_modifiers := {
