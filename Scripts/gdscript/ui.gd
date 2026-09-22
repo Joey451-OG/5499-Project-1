@@ -31,6 +31,20 @@ func _process(_delta: float) -> void:
 		
 	if Globals.p_state == Globals.PlayerState.SWIMING:
 		vignette.show()
+		vignette.set_instance_shader_parameter("alpha",
+			lerpf(0.5, 0.9, Globals.vignette_scale)
+		)
+		print("[ui.gd]: alpha %.2f" % lerpf(0.5, 0.9, Globals.vignette_scale))
+		
+		vignette.set_instance_shader_parameter("inner_radius",
+			lerpf(0.7, 0.1, Globals.vignette_scale)
+		)
+		print("[ui.gd]: inner radius %.2f" % lerpf(0.7, 0.1, Globals.vignette_scale))
+		
+		vignette.set_instance_shader_parameter("outer_radius",
+			lerpf(1.5, 1.0, Globals.vignette_scale)
+		)
+		print("[ui.gd]: outer radius %.2f" % lerpf(1.5, 1.0, Globals.vignette_scale))
 	
 	if Globals.p_state == Globals.PlayerState.IDLE:
 		vignette.hide()

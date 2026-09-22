@@ -23,6 +23,15 @@ font_size = 32
 script = ExtResource("1_nxvpl")
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=692810200]
+editor_description = "starting shader params:
+a: 0.5
+ir: 0.7
+or: 1.5
+
+ending shader params:
+a: 0.9
+ir: 0.1
+or: 1.0"
 material = SubResource("ShaderMaterial_sj43t")
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,6 +70,7 @@ text = "Next upgrade: 999s."
 label_settings = SubResource("LabelSettings_sj43t")
 
 [node name="EndScreen" type="MarginContainer" parent="." unique_id=560313310]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

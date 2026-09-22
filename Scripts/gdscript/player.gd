@@ -42,7 +42,9 @@ func _process(delta: float) -> void:
 	if not isUnderWater and !lung_timer.is_stopped():
 		lung_timer.stop()
 	
-	lung_indicator.scale.x = 1 - (( lung_timer.wait_time - lung_timer.time_left ) / lung_timer.wait_time)
+	var timer_completed_percentage := (( lung_timer.wait_time - lung_timer.time_left ) / lung_timer.wait_time)
+	lung_indicator.scale.x = 1 - timer_completed_percentage
+	Globals.vignette_scale = timer_completed_percentage
 	
 	for area in interacting_hit_box.get_overlapping_areas():
 		if area.has_meta("isAir"):
