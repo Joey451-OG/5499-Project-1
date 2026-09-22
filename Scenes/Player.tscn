@@ -10,6 +10,7 @@ height = 559.99854
 [node name="Player" type="CharacterBody2D" unique_id=934692645]
 collision_layer = 3
 script = ExtResource("1_kyqiw")
+item_slow_percent = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=802217270]
 position = Vector2(10.000003, 1)
