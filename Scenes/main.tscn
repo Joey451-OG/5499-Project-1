@@ -105,9 +105,17 @@ texture = ExtResource("2_344ge")
 
 [node name="Enviroment" type="Node" parent="Textures" unique_id=322227639]
 
+[node name="scr0_mound" type="Node" parent="Textures/Enviroment" unique_id=130990609]
+
+[node name="Env" parent="Textures/Enviroment/scr0_mound" unique_id=1860050707 instance=ExtResource("6_d1ilt")]
+position = Vector2(1617, 762)
+scale = Vector2(4.328125, 3.375)
+texture = ExtResource("10_k12tt")
+state = 3
+
 [node name="scr0_L" type="Node" parent="Textures/Enviroment" unique_id=503111215]
 
-[node name="Env" parent="Textures/Enviroment/scr0_L" unique_id=1860050707 instance=ExtResource("6_d1ilt")]
+[node name="Env" parent="Textures/Enviroment/scr0_L" unique_id=125996854 instance=ExtResource("6_d1ilt")]
 position = Vector2(1315, 253)
 texture = ExtResource("7_6iyac")
 state = 1
@@ -166,6 +174,14 @@ rotation = 1.5707964
 scale = Vector2(3.12, 1)
 texture = ExtResource("7_d1ilt")
 state = 2
+
+[node name="scr1_block" type="Node" parent="Textures/Enviroment" unique_id=359252660]
+
+[node name="Env" parent="Textures/Enviroment/scr1_block" unique_id=1715681565 instance=ExtResource("6_d1ilt")]
+position = Vector2(2224, 452.5)
+scale = Vector2(3.5624993, 6.6406245)
+texture = ExtResource("7_6iyac")
+state = 1
 
 [node name="Ground" type="Node" parent="Textures/Enviroment" unique_id=1972916572]
 
@@ -525,7 +541,7 @@ collision_mask = 0
 metadata/isAir = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Water" unique_id=321074166]
-position = Vector2(2789, 384.5)
+position = Vector2(2761, 366)
 shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
 
