@@ -32,13 +32,13 @@ size = Vector2(1343, 857)
 size = Vector2(1454, 836)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fevyy"]
-size = Vector2(1457, 1076)
+size = Vector2(1457, 1059)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibaj"]
-size = Vector2(1737, 1075)
+size = Vector2(1737, 1057)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
-size = Vector2(1652, 1071)
+size = Vector2(1604, 1053)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
 size = Vector2(4292, 789)
@@ -473,6 +473,24 @@ scale = Vector2(4.046872, 8.609374)
 texture = ExtResource("10_k12tt")
 state = 3
 
+[node name="Env6" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=1586992044 instance=ExtResource("6_d1ilt")]
+position = Vector2(5060.5, 1038)
+scale = Vector2(4.046872, 8.609374)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env7" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=562139481 instance=ExtResource("6_d1ilt")]
+position = Vector2(5061, 1523)
+scale = Vector2(4.046872, 8.609374)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env8" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=608575046 instance=ExtResource("6_d1ilt")]
+position = Vector2(5061, 2039)
+scale = Vector2(4.046872, 8.609374)
+texture = ExtResource("10_k12tt")
+state = 3
+
 [node name="Env3" parent="Textures/Enviroment/scr2_bottom_right_nook" unique_id=97483593 instance=ExtResource("6_d1ilt")]
 position = Vector2(4442, 588)
 scale = Vector2(3.8750045, 1)
@@ -483,6 +501,104 @@ state = 4
 position = Vector2(4572, 718.0874)
 rotation = 1.5707964
 scale = Vector2(3.4972677, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="DepthsGround" type="Node" parent="Textures/Enviroment" unique_id=519998459]
+
+[node name="Env" parent="Textures/Enviroment/DepthsGround" unique_id=1988224238 instance=ExtResource("6_d1ilt")]
+position = Vector2(236.5, 2010.5)
+scale = Vector2(7.703125, 2.890625)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env2" parent="Textures/Enviroment/DepthsGround" unique_id=1784591058 instance=ExtResource("6_d1ilt")]
+position = Vector2(518.99994, 2023.5)
+scale = Vector2(7.703125, 3.296875)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env3" parent="Textures/Enviroment/DepthsGround" unique_id=2096721105 instance=ExtResource("6_d1ilt")]
+position = Vector2(946, 2021)
+scale = Vector2(7.703125, 3.21875)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env4" parent="Textures/Enviroment/DepthsGround" unique_id=1241293485 instance=ExtResource("6_d1ilt")]
+position = Vector2(1203, 2024.5)
+scale = Vector2(7.703125, 3.328125)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env5" parent="Textures/Enviroment/DepthsGround" unique_id=1127550981 instance=ExtResource("6_d1ilt")]
+position = Vector2(1645, 2029)
+scale = Vector2(7.703125, 3.46875)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env6" parent="Textures/Enviroment/DepthsGround" unique_id=107528479 instance=ExtResource("6_d1ilt")]
+position = Vector2(1733, 2032.5)
+scale = Vector2(7.703125, 3.578125)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env7" parent="Textures/Enviroment/DepthsGround" unique_id=1113937624 instance=ExtResource("6_d1ilt")]
+position = Vector2(2070, 2029.5)
+scale = Vector2(7.703125, 3.484375)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env8" parent="Textures/Enviroment/DepthsGround" unique_id=795393745 instance=ExtResource("6_d1ilt")]
+position = Vector2(2415, 2043)
+scale = Vector2(7.703125, 3.90625)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env9" parent="Textures/Enviroment/DepthsGround" unique_id=900405562 instance=ExtResource("6_d1ilt")]
+position = Vector2(2800.9998, 2055)
+scale = Vector2(7.703125, 4.28125)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env10" parent="Textures/Enviroment/DepthsGround" unique_id=1521203776 instance=ExtResource("6_d1ilt")]
+position = Vector2(3269, 2075.5)
+scale = Vector2(7.703125, 4.921875)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env11" parent="Textures/Enviroment/DepthsGround" unique_id=473814438 instance=ExtResource("6_d1ilt")]
+position = Vector2(3417, 2077.5)
+scale = Vector2(7.703125, 4.984375)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env12" parent="Textures/Enviroment/DepthsGround" unique_id=1750250546 instance=ExtResource("6_d1ilt")]
+position = Vector2(3661.9998, 2086)
+scale = Vector2(7.703125, 5.25)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env13" parent="Textures/Enviroment/DepthsGround" unique_id=667768867 instance=ExtResource("6_d1ilt")]
+position = Vector2(4067, 1950)
+scale = Vector2(7.703125, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env14" parent="Textures/Enviroment/DepthsGround" unique_id=806969465 instance=ExtResource("6_d1ilt")]
+position = Vector2(4067, 2105.5)
+scale = Vector2(7.703125, 5.859375)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env15" parent="Textures/Enviroment/DepthsGround" unique_id=2021662944 instance=ExtResource("6_d1ilt")]
+position = Vector2(4415, 2101)
+scale = Vector2(7.703125, 5.71875)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env16" parent="Textures/Enviroment/DepthsGround" unique_id=1236271861 instance=ExtResource("6_d1ilt")]
+position = Vector2(4832.9995, 2109.5)
+scale = Vector2(7.703125, 5.984375)
 texture = ExtResource("9_fdnlq")
 state = 4
 
@@ -519,21 +635,21 @@ shape = SubResource("RectangleShape2D_k12tt")
 position = Vector2(4082, 1228)
 
 [node name="CollisionShape2D" parent="Cameras/Camera4/cameraZone" parent_id_path=PackedInt32Array(2090915538, 384282297) index="0" unique_id=1106377674]
-position = Vector2(81.5, 169)
+position = Vector2(81.5, 160.5)
 shape = SubResource("RectangleShape2D_fevyy")
 
 [node name="Camera5" parent="Cameras" unique_id=1450325684 instance=ExtResource("5_kry3j")]
 position = Vector2(2770, 1230)
 
 [node name="CollisionShape2D" parent="Cameras/Camera5/cameraZone" parent_id_path=PackedInt32Array(1450325684, 384282297) index="0" unique_id=1106377674]
-position = Vector2(-225.5, 168.5)
+position = Vector2(-225.5, 159.5)
 shape = SubResource("RectangleShape2D_hibaj")
 
 [node name="Camera6" parent="Cameras" unique_id=2051479548 instance=ExtResource("5_kry3j")]
 position = Vector2(885, 1279)
 
 [node name="CollisionShape2D" parent="Cameras/Camera6/cameraZone" parent_id_path=PackedInt32Array(2051479548, 384282297) index="0" unique_id=1106377674]
-position = Vector2(-51, 121.5)
+position = Vector2(-27, 112.5)
 shape = SubResource("RectangleShape2D_pdsj5")
 
 [node name="Pickups" type="Node" parent="." unique_id=1078304600]
