@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv4ty0f6slxjb"
-path="res://.godot/imported/Broken_Env.png-cc99506a179cc1a0fb149448afbd3114.ctex"
+uid="uid://bdkqmgj1402es"
+path="res://.godot/imported/Ice_Spike.png-574215e3c1b15cc3097a00bb648cc487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Asesprite/Broken_Env.png"
-dest_files=["res://.godot/imported/Broken_Env.png-cc99506a179cc1a0fb149448afbd3114.ctex"]
+source_file="res://Assets/Sprites/Ice_Spike.png"
+dest_files=["res://.godot/imported/Ice_Spike.png-574215e3c1b15cc3097a00bb648cc487.ctex"]
 
 [params]
 

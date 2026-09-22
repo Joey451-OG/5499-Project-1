@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var DRAG := 1.1
 @export var LUNG_CAPACITY_IN_SECONDS := 10
 @export var item_slow_percent : float = 0.5
+@export var ice_spike_penalty : float = 0.1
 
 var isUnderWater := false
 var pickup : Node2D = null
@@ -89,3 +90,7 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 		print("[player.gd]: Touched Pickup!")
 		area.disable_mode = CollisionObject2D.DISABLE_MODE_REMOVE
 		pickup = area.get_parent()
+		
+	if area.has_meta("isIceSpike") and area.get_meta("isIceSpike"):
+		current_lung_capacity_in_seconds *= 1 - ice_spike_penalty
+		print("[player.gd]: Just hit Ice Spike")

@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bn7h7bmv0h1d2" path="res://Assets/Sprites/Base_Ground_Tile.png" id="10_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cbjlpck3ewqkb" path="res://Assets/Sprites/Breakable_Connecting_Ground_Tile.png" id="11_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://c6mlg57uvnay7" path="res://Scenes/Upgrade_Station.tscn" id="13_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://b4se2le0vcwid" path="res://Scenes/IceSpike.tscn" id="16_h1bgf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -232,17 +233,11 @@ scale = Vector2(4.12, 1)
 texture = ExtResource("9_fdnlq")
 state = 4
 
-[node name="Env9" parent="Textures/Enviroment/Ground" unique_id=690139488 instance=ExtResource("6_d1ilt")]
-position = Vector2(2485, 845)
-scale = Vector2(4.12, 1)
-texture = ExtResource("9_fdnlq")
-state = 4
-
 [node name="Env10" parent="Textures/Enviroment/Ground" unique_id=636381646 instance=ExtResource("6_d1ilt")]
-position = Vector2(2740, 845)
-scale = Vector2(4.12, 1)
-texture = ExtResource("9_fdnlq")
-state = 4
+position = Vector2(2632.42, 845)
+scale = Vector2(7.4818764, 1)
+texture = ExtResource("11_h1bgf")
+state = 8
 
 [node name="Env11" parent="Textures/Enviroment/Ground" unique_id=1017554355 instance=ExtResource("6_d1ilt")]
 position = Vector2(2994.0002, 845)
@@ -544,6 +539,24 @@ metadata/isAir = false
 position = Vector2(2761, 366)
 shape = SubResource("RectangleShape2D_i58cg")
 debug_color = Color(2.4065375e-06, 0.64241654, 0.32336965, 0.41960785)
+
+[node name="Obsticals" type="Node" parent="." unique_id=1201869154]
+
+[node name="IceSpike" parent="Obsticals" unique_id=788379937 instance=ExtResource("16_h1bgf")]
+position = Vector2(3850.0002, 13.000008)
+scale = Vector2(3.595, 3.595)
+
+[node name="IceSpike2" parent="Obsticals" unique_id=1629759525 instance=ExtResource("16_h1bgf")]
+position = Vector2(4052, 13.000008)
+scale = Vector2(3.595, 3.595)
+
+[node name="IceSpike3" parent="Obsticals" unique_id=1231700696 instance=ExtResource("16_h1bgf")]
+position = Vector2(4254, 13.000008)
+scale = Vector2(3.595, 3.595)
+
+[node name="IceSpike4" parent="Obsticals" unique_id=635581258 instance=ExtResource("16_h1bgf")]
+position = Vector2(4449, 13.000008)
+scale = Vector2(3.595, 3.595)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
 
