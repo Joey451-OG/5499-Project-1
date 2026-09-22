@@ -8,10 +8,12 @@ extends CharacterBody2D
 
 var isUnderWater := false
 var pickup : Node2D = null
-var current_lung_capacity_in_seconds
+var current_lung_capacity_in_seconds : float
+
+var lung_time_left : float = 0.0
+var isLungTimerRunning : bool = false
 
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var lung_timer: Timer = $lungTimer
 @onready var lung_indicator: Line2D = $Sprite2D/lungIndicator
 @onready var item_pivot: Node2D = $Sprite2D/ItemPivot
 @onready var interacting_hit_box: Area2D = $interactingHitBox
@@ -33,19 +35,32 @@ func _process(delta: float) -> void:
 	elif sprite.scale.y > 0:
 		sprite.scale.y = -sprite.scale.y
 	
-	if lung_timer.is_stopped() and isUnderWater:
+	if not isLungTimerRunning and isUnderWater:
 		if Globals.current_abilities["higher_lc"]:
 			current_lung_capacity_in_seconds = LUNG_CAPACITY_IN_SECONDS
 			current_lung_capacity_in_seconds *= Globals.ability_modifiers["higher_lc"]
+			
+		lung_time_left = current_lung_capacity_in_seconds
+		isLungTimerRunning = true
+	
+	if not isUnderWater and isLungTimerRunning:
+		# manually reset needed variables
+		isLungTimerRunning = false
+		lung_time_left = 0.0
+		lung_indicator.scale.x = 0
+		Globals.vignette_scale = 0.0
+	
+	if isLungTimerRunning:
+		# manually count down
+		lung_time_left -= delta
+		var timer_completed_percentage := (( current_lung_capacity_in_seconds - lung_time_left ) / current_lung_capacity_in_seconds)
+		lung_indicator.scale.x = 1 - timer_completed_percentage
+		Globals.vignette_scale = timer_completed_percentage
 		
-		lung_timer.start(current_lung_capacity_in_seconds)
-	
-	if not isUnderWater and !lung_timer.is_stopped():
-		lung_timer.stop()
-	
-	var timer_completed_percentage := (( lung_timer.wait_time - lung_timer.time_left ) / lung_timer.wait_time)
-	lung_indicator.scale.x = 1 - timer_completed_percentage
-	Globals.vignette_scale = timer_completed_percentage
+		# manually stop the timer
+		if lung_time_left <= 0:
+			isLungTimerRunning = false
+			_on_lung_timer_timeout()
 	
 	for area in interacting_hit_box.get_overlapping_areas():
 		if area.has_meta("isAir"):
@@ -92,5 +107,7 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 		pickup = area.get_parent()
 		
 	if area.has_meta("isIceSpike") and area.get_meta("isIceSpike"):
-		current_lung_capacity_in_seconds *= 1 - ice_spike_penalty
+		if isLungTimerRunning:
+			lung_time_left *= 1.0 - ice_spike_penalty
+		
 		print("[player.gd]: Just hit Ice Spike")

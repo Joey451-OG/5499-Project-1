@@ -53,8 +53,6 @@ position = Vector2(0, -23.5)
 points = PackedVector2Array(30, 0, -30, 0)
 default_color = Color(1, 0, 0, 1)
 
-[node name="lungTimer" type="Timer" parent="." unique_id=869646647]
-
 [node name="interactingHitBox" type="Area2D" parent="." unique_id=305945085]
 editor_description = "PLAYER"
 collision_layer = 32768
@@ -67,5 +65,4 @@ scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_0l5lv")
 debug_color = Color(0.21931726, 0.6393842, 0, 0.41960785)
 
-[connection signal="timeout" from="lungTimer" to="." method="_on_lung_timer_timeout"]
 [connection signal="area_entered" from="interactingHitBox" to="." method="_on_interacting_hit_box_area_entered"]
