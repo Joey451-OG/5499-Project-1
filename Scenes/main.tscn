@@ -31,6 +31,15 @@ size = Vector2(1343, 857)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k12tt"]
 size = Vector2(1454, 836)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fevyy"]
+size = Vector2(1457, 1076)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hibaj"]
+size = Vector2(1737, 1075)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
+size = Vector2(1652, 1071)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
 size = Vector2(4292, 789)
 
@@ -506,6 +515,27 @@ position = Vector2(4086, 473)
 position = Vector2(76, -46)
 shape = SubResource("RectangleShape2D_k12tt")
 
+[node name="Camera4" parent="Cameras" unique_id=2090915538 instance=ExtResource("5_kry3j")]
+position = Vector2(4082, 1228)
+
+[node name="CollisionShape2D" parent="Cameras/Camera4/cameraZone" parent_id_path=PackedInt32Array(2090915538, 384282297) index="0" unique_id=1106377674]
+position = Vector2(81.5, 169)
+shape = SubResource("RectangleShape2D_fevyy")
+
+[node name="Camera5" parent="Cameras" unique_id=1450325684 instance=ExtResource("5_kry3j")]
+position = Vector2(2770, 1230)
+
+[node name="CollisionShape2D" parent="Cameras/Camera5/cameraZone" parent_id_path=PackedInt32Array(1450325684, 384282297) index="0" unique_id=1106377674]
+position = Vector2(-225.5, 168.5)
+shape = SubResource("RectangleShape2D_hibaj")
+
+[node name="Camera6" parent="Cameras" unique_id=2051479548 instance=ExtResource("5_kry3j")]
+position = Vector2(885, 1279)
+
+[node name="CollisionShape2D" parent="Cameras/Camera6/cameraZone" parent_id_path=PackedInt32Array(2051479548, 384282297) index="0" unique_id=1106377674]
+position = Vector2(-51, 121.5)
+shape = SubResource("RectangleShape2D_pdsj5")
+
 [node name="Pickups" type="Node" parent="." unique_id=1078304600]
 
 [node name="Pickup" parent="Pickups" unique_id=529543630 instance=ExtResource("4_jjvhh")]
@@ -603,7 +633,11 @@ position = Vector2(4449, 13.000008)
 scale = Vector2(3.595, 3.595)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
+visible = false
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
 [editable path="Cameras/Camera3"]
+[editable path="Cameras/Camera4"]
+[editable path="Cameras/Camera5"]
+[editable path="Cameras/Camera6"]
