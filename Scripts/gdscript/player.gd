@@ -68,7 +68,7 @@ func _process(delta: float) -> void:
 	for area in interacting_hit_box.get_overlapping_areas():
 		if area.has_meta("isAir"):
 			isUnderWater = !area.get_meta("isAir")
-			#print(isUnderWater)
+			print(isUnderWater)
 			
 func _physics_process(delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.DROWNED:
