@@ -20,6 +20,7 @@ var isLungTimerRunning : bool = false
 
 func _ready() -> void:
 	current_lung_capacity_in_seconds = LUNG_CAPACITY_IN_SECONDS
+	lung_indicator.scale.x = 0
 
 func _process(delta: float) -> void:
 	
@@ -68,7 +69,7 @@ func _process(delta: float) -> void:
 	for area in interacting_hit_box.get_overlapping_areas():
 		if area.has_meta("isAir"):
 			isUnderWater = !area.get_meta("isAir")
-			print(isUnderWater)
+			#print(isUnderWater)
 			
 func _physics_process(delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.DROWNED:
