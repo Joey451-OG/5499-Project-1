@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 var isUnderWater := false
 var pickup : Node2D = null
+var key : Node2D = null
 var current_lung_capacity_in_seconds : float
 
 var lung_time_left : float = 0.0
@@ -33,6 +34,13 @@ func _process(delta: float) -> void:
 
 	if pickup != null:
 		pickup.global_position = item_pivot.global_position
+	
+	if key != null:
+		key.global_position = item_pivot.global_position
+	
+	if key != null and !Globals.playerHasKey:
+		key.queue_free()
+		key = null
 	
 	if is_in_range(rad_to_deg(rotation), -90, 90):
 		sprite.scale = abs(sprite.scale)
@@ -115,3 +123,7 @@ func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
 			lung_time_left *= 1.0 - ice_spike_penalty
 		
 		print("[player.gd]: Just hit Ice Spike")
+	
+	if area.has_meta("isKey") and area.get_meta("isKey"):
+		key = area.get_parent()
+		Globals.playerHasKey = true

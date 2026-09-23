@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dyd2nwgcgn2y7"]
+
+[ext_resource type="Texture2D" uid="uid://bs8fea25o2f8d" path="res://Assets/Sprites/key_base_env.png" id="1_jefnh"]
+[ext_resource type="Script" uid="uid://sicbix7rv0qf" path="res://Scripts/gdscript/final_lock.gd" id="2_bup32"]
+[ext_resource type="Texture2D" uid="uid://de7nmstmvoo6l" path="res://Assets/Sprites/Connecting_Env_Tile.png" id="2_srurf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
+size = Vector2(74, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i58cg"]
+size = Vector2(65, 114)
+
+[node name="KeyBaseEnv" type="Sprite2D" unique_id=1068554396]
+texture = ExtResource("1_jefnh")
+script = ExtResource("2_bup32")
+
+[node name="ConnectingEnvTile" type="Sprite2D" parent="." unique_id=5799299]
+z_index = -1
+position = Vector2(1, -26)
+rotation = 1.5707964
+texture = ExtResource("2_srurf")
+
+[node name="ConnectingEnvTile2" type="Sprite2D" parent="." unique_id=1332808133]
+z_index = -1
+position = Vector2(1, 24)
+rotation = 1.5707964
+texture = ExtResource("2_srurf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=126864209]
+collision_layer = 0
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=487696959]
+position = Vector2(27, -1)
+shape = SubResource("RectangleShape2D_sj43t")
+debug_color = Color(0.34361047, 0.48557323, 1, 0.41960785)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1016095825]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=769262267]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_i58cg")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

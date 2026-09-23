@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cx1jv6jad3xxh"]
 
+[ext_resource type="Script" uid="uid://bkxrcimlcv506" path="res://Scripts/gdscript/level.gd" id="1_6vcvc"]
 [ext_resource type="Texture2D" uid="uid://dom2h2urd8ojc" path="res://Assets/Sprites/Ice_Sheet.png" id="1_344ge"]
 [ext_resource type="PackedScene" uid="uid://vmtniiwn1oht" path="res://Scenes/Player.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bmc6vdmlblsmg" path="res://Assets/Sprites/Dam.png" id="2_8gbba"]
@@ -27,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dr3hyqykj7twv" path="res://Assets/DEV/BENV_Rock.png" id="19_ueoa1"]
 [ext_resource type="Texture2D" uid="uid://dclu3mcl5cfrl" path="res://Assets/DEV/BENV_sticks-center.png" id="20_6vcvc"]
 [ext_resource type="Texture2D" uid="uid://jnr8kdnx61v0" path="res://Assets/DEV/BENV_sticks.png" id="21_7k868"]
+[ext_resource type="PackedScene" uid="uid://dyd2nwgcgn2y7" path="res://Scenes/FinalLock.tscn" id="28_ueoa1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
 
@@ -54,7 +56,8 @@ size = Vector2(4267, 860.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
 size = Vector2(3982, 1108)
 
-[node name="Node2D" type="Node2D" unique_id=1050794869]
+[node name="Level" type="Node2D" unique_id=1050794869]
+script = ExtResource("1_6vcvc")
 
 [node name="Collisions and Walls" type="Node" parent="." unique_id=1320735938]
 
@@ -1218,6 +1221,12 @@ scale = Vector2(3.618, 3.618)
 [node name="IceSpike7" parent="Obsticals" unique_id=1227340511 instance=ExtResource("16_h1bgf")]
 position = Vector2(2304, 854)
 scale = Vector2(5.57, 5.57)
+
+[node name="FinalLock" parent="." unique_id=1068554396 instance=ExtResource("28_ueoa1")]
+position = Vector2(1762, 1862)
+
+[node name="KeySpawn" type="Marker2D" parent="." unique_id=45291488]
+position = Vector2(242, 248)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
 

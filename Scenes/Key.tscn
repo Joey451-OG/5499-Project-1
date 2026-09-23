@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdorlugqr8q3c"]
+
+[ext_resource type="Texture2D" uid="uid://bpomjddvumexu" path="res://Assets/Sprites/key.png" id="1_og2wv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj43t"]
+size = Vector2(64, 64)
+
+[node name="Key" type="Sprite2D" unique_id=972803243]
+texture = ExtResource("1_og2wv")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1581866979]
+modulate = Color(0.13333334, 0.13333334, 0.13333334, 0.3764706)
+z_index = -1
+position = Vector2(0, 2)
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("1_og2wv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1466130085]
+collision_layer = 4
+collision_mask = 0
+metadata/isKey = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1592915457]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_sj43t")
+debug_color = Color(0.8227254, 0.0017094117, 0.96199936, 0.41960785)

@@ -2,6 +2,7 @@ extends Node
 
 signal pointsUpdate
 signal pointsUntilUpdate
+signal spawnKey
 
 enum PlayerState {IDLE, SWIMING, DROWNED}
 
@@ -11,6 +12,10 @@ var points := 0 :
 	set(value):
 		points = value
 		emit_signal("pointsUpdate")
+		
+		if points == 25:
+			print("[Globals.gd]: Emitting spawnKey")
+			emit_signal("spawnKey")
 
 var points_until_next_upgrade : int = 5:
 	set(value):
@@ -21,6 +26,7 @@ var god_mode : bool = false
 var vignette_scale : float = 0.0
 var p_state : PlayerState = PlayerState.IDLE
 var added_upgrade_lock := false
+var playerHasKey := false
 
 var current_abilities := {
 	"higher_lc" : false, # Higher lung capacity
