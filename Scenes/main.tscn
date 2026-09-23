@@ -569,6 +569,32 @@ scale = Vector2(3.921874, 1.374999)
 texture = ExtResource("9_fdnlq")
 state = 4
 
+[node name="scr4_locked" type="Node" parent="Textures/Enviroment" unique_id=1916119870]
+
+[node name="Env4" parent="Textures/Enviroment/scr4_locked" unique_id=1064588803 instance=ExtResource("6_d1ilt")]
+position = Vector2(2613, 1813.5)
+scale = Vector2(1.4375, 4.234376)
+texture = ExtResource("11_h1bgf")
+state = 8
+
+[node name="Env3" parent="Textures/Enviroment/scr4_locked" unique_id=683239798 instance=ExtResource("6_d1ilt")]
+position = Vector2(2629, 1653)
+scale = Vector2(1.9375012, 1.9375012)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env" parent="Textures/Enviroment/scr4_locked" unique_id=1132285174 instance=ExtResource("6_d1ilt")]
+position = Vector2(2984.5, 1652.5)
+scale = Vector2(9.484377, 1.9531255)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env2" parent="Textures/Enviroment/scr4_locked" unique_id=1752365409 instance=ExtResource("6_d1ilt")]
+position = Vector2(2851.25, 1652.5)
+scale = Vector2(5.914064, 1.9531255)
+texture = ExtResource("9_fdnlq")
+state = 4
+
 [node name="scr3_mound" type="Node" parent="Textures/Enviroment" unique_id=227416534]
 
 [node name="Env" parent="Textures/Enviroment/scr3_mound" unique_id=1082773638 instance=ExtResource("6_d1ilt")]
@@ -793,6 +819,17 @@ position = Vector2(4773, 1913)
 [node name="Pickup20" parent="Pickups" unique_id=1838740771 instance=ExtResource("4_jjvhh")]
 position = Vector2(4160, 1913)
 
+[node name="Pickup21" parent="Pickups" unique_id=1452019734 instance=ExtResource("4_jjvhh")]
+position = Vector2(2906, 1913)
+
+[node name="Pickup22" parent="Pickups" unique_id=1530950256 instance=ExtResource("4_jjvhh")]
+position = Vector2(2422, 1199)
+rotation = 1.1526557
+
+[node name="Pickup23" parent="Pickups" unique_id=786060679 instance=ExtResource("4_jjvhh")]
+position = Vector2(2929, 1083)
+rotation = 2.4788678
+
 [node name="Areas" type="Node" parent="." unique_id=1348208264]
 
 [node name="Air" type="Area2D" parent="Areas" unique_id=957781194]
@@ -840,6 +877,14 @@ scale = Vector2(3.595, 3.595)
 [node name="IceSpike5" parent="Obsticals" unique_id=243256008 instance=ExtResource("16_h1bgf")]
 position = Vector2(4193, 1219)
 scale = Vector2(2.82, 2.82)
+
+[node name="IceSpike6" parent="Obsticals" unique_id=482507187 instance=ExtResource("16_h1bgf")]
+position = Vector2(2974, 859.99994)
+scale = Vector2(3.618, 3.618)
+
+[node name="IceSpike7" parent="Obsticals" unique_id=1227340511 instance=ExtResource("16_h1bgf")]
+position = Vector2(2304, 854)
+scale = Vector2(5.57, 5.57)
 
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
 
