@@ -17,7 +17,7 @@ var points_until_next_upgrade : int = 5:
 		points_until_next_upgrade = value
 		emit_signal("pointsUntilUpdate")
 
-var god_mode : bool = true
+var god_mode : bool = false
 var vignette_scale : float = 0.0
 var p_state : PlayerState = PlayerState.IDLE
 var added_upgrade_lock := false

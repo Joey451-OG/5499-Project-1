@@ -22,6 +22,9 @@ func _ready() -> void:
 	current_lung_capacity_in_seconds = LUNG_CAPACITY_IN_SECONDS
 
 func _process(delta: float) -> void:
+	
+	if Globals.p_state == Globals.PlayerState.DROWNED:
+		return
 
 	#print(sprite.get_rect().has_point(to_local(get_global_mouse_position())))
 	if not sprite.get_rect().has_point(to_local(get_global_mouse_position())):
@@ -68,8 +71,8 @@ func _process(delta: float) -> void:
 			#print(isUnderWater)
 			
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	
+	if Globals.p_state == Globals.PlayerState.DROWNED:
+		return
 	
 	velocity = transform.x * Input.get_action_strength("swim") * SPEED
 	if Globals.current_abilities["speed"]:

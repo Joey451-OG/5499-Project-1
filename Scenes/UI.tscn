@@ -40,6 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Normal" type="MarginContainer" parent="." unique_id=1198342830]
+visible = false
 custom_minimum_size = Vector2(1280, 720)
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,7 +71,6 @@ text = "Next upgrade: 999s."
 label_settings = SubResource("LabelSettings_sj43t")
 
 [node name="EndScreen" type="MarginContainer" parent="." unique_id=560313310]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -116,3 +116,20 @@ grow_vertical = 2
 text = "Score 999"
 label_settings = SubResource("LabelSettings_sdogw")
 horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="EndScreen/Panel" unique_id=594712884]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = 85.0
+offset_right = 32.5
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
+
+[connection signal="pressed" from="EndScreen/Panel/Restart" to="." method="_on_restart_pressed"]

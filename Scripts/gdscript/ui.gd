@@ -52,3 +52,8 @@ func _process(_delta: float) -> void:
 func _on_points_until_update():
 	#print("[ui.gd]: Points until next upgrade: %d" % Globals.points_until_next_upgrade)
 	next_upgrade.text = next_upgd_text % Globals.points_until_next_upgrade
+
+
+func _on_restart_pressed() -> void:
+	Globals.p_state = Globals.PlayerState.IDLE
+	get_tree().reload_current_scene()

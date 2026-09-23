@@ -238,6 +238,14 @@ scale = Vector2(3.5624993, 6.6406245)
 texture = ExtResource("7_6iyac")
 state = 1
 
+[node name="scr4-5_top_mound" type="Node" parent="Textures/Enviroment" unique_id=67304976]
+
+[node name="Env" parent="Textures/Enviroment/scr4-5_top_mound" unique_id=707470537 instance=ExtResource("6_d1ilt")]
+position = Vector2(1633.75, 1206.25)
+scale = Vector2(4.9140625, 11.8671875)
+texture = ExtResource("10_k12tt")
+state = 3
+
 [node name="Ground" type="Node" parent="Textures/Enviroment" unique_id=1972916572]
 
 [node name="Env" parent="Textures/Enviroment/Ground" unique_id=175000143 instance=ExtResource("6_d1ilt")]
@@ -698,6 +706,64 @@ state = 4
 [node name="Env16" parent="Textures/Enviroment/DepthsGround" unique_id=1236271861 instance=ExtResource("6_d1ilt")]
 position = Vector2(4832.9995, 2109.5)
 scale = Vector2(7.703125, 5.984375)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="scr4_angle" type="Node" parent="Textures/Enviroment" unique_id=687434582]
+
+[node name="Env5" parent="Textures/Enviroment/scr4_angle" unique_id=342760374 instance=ExtResource("6_d1ilt")]
+position = Vector2(1239, 1772)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env9" parent="Textures/Enviroment/scr4_angle" unique_id=661233068 instance=ExtResource("6_d1ilt")]
+position = Vector2(1765, 1772)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env6" parent="Textures/Enviroment/scr4_angle" unique_id=102652639 instance=ExtResource("6_d1ilt")]
+position = Vector2(1351.5, 1772)
+scale = Vector2(3.109375, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env7" parent="Textures/Enviroment/scr4_angle" unique_id=979881557 instance=ExtResource("6_d1ilt")]
+position = Vector2(1490, 1772)
+scale = Vector2(3.109375, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env8" parent="Textures/Enviroment/scr4_angle" unique_id=880341990 instance=ExtResource("6_d1ilt")]
+position = Vector2(1660, 1772)
+scale = Vector2(3.109375, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env" parent="Textures/Enviroment/scr4_angle" unique_id=275023147 instance=ExtResource("6_d1ilt")]
+position = Vector2(1239, 988.4448)
+rotation = 1.5707964
+scale = Vector2(3.8576517, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env2" parent="Textures/Enviroment/scr4_angle" unique_id=1373674974 instance=ExtResource("6_d1ilt")]
+position = Vector2(1239, 1196)
+rotation = 1.5707964
+scale = Vector2(3.8576517, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env3" parent="Textures/Enviroment/scr4_angle" unique_id=505572286 instance=ExtResource("6_d1ilt")]
+position = Vector2(1239, 1404)
+rotation = 1.5707964
+scale = Vector2(3.8576517, 1)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env4" parent="Textures/Enviroment/scr4_angle" unique_id=1758319167 instance=ExtResource("6_d1ilt")]
+position = Vector2(1239, 1632)
+rotation = 1.5707964
+scale = Vector2(3.8576517, 1)
 texture = ExtResource("9_fdnlq")
 state = 4
 
