@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bn7h7bmv0h1d2" path="res://Assets/Sprites/Base_Ground_Tile.png" id="10_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cbjlpck3ewqkb" path="res://Assets/Sprites/Breakable_Connecting_Ground_Tile.png" id="11_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://c6mlg57uvnay7" path="res://Scenes/Upgrade_Station.tscn" id="13_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://clsejmjgpej8q" path="res://Assets/Sprites/Breakable_Base_Ground_Tile.png" id="14_hibaj"]
 [ext_resource type="PackedScene" uid="uid://b4se2le0vcwid" path="res://Scenes/IceSpike.tscn" id="16_h1bgf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kyqiw"]
@@ -504,6 +505,78 @@ scale = Vector2(3.4972677, 1)
 texture = ExtResource("9_fdnlq")
 state = 4
 
+[node name="scr3_bottom_right" type="Node" parent="Textures/Enviroment" unique_id=1525268998]
+
+[node name="Env" parent="Textures/Enviroment/scr3_bottom_right" unique_id=1887805748 instance=ExtResource("6_d1ilt")]
+position = Vector2(4559.5, 1788.5)
+scale = Vector2(2.234375, 5.140624)
+texture = ExtResource("14_hibaj")
+state = 7
+
+[node name="Env3" parent="Textures/Enviroment/scr3_bottom_right" unique_id=1654237831 instance=ExtResource("6_d1ilt")]
+position = Vector2(4561.5, 1602.0001)
+scale = Vector2(2.1599998, 2.1599998)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env2" parent="Textures/Enviroment/scr3_bottom_right" unique_id=845563142 instance=ExtResource("6_d1ilt")]
+position = Vector2(4763, 1601)
+scale = Vector2(5.281249, 2.15625)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="scr3_lock" type="Node" parent="Textures/Enviroment" unique_id=911144842]
+
+[node name="Env6" parent="Textures/Enviroment/scr3_lock" unique_id=307603347 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(3871, 1016)
+scale = Vector2(1.09375, 4.7812505)
+texture = ExtResource("11_h1bgf")
+state = 8
+
+[node name="Env5" parent="Textures/Enviroment/scr3_lock" unique_id=1637620982 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(3880, 1195.0001)
+scale = Vector2(1.3750029, 1.3750029)
+texture = ExtResource("10_k12tt")
+state = 3
+
+[node name="Env" parent="Textures/Enviroment/scr3_lock" unique_id=1771633285 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(4735, 1195)
+scale = Vector2(6.312496, 1.374999)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env2" parent="Textures/Enviroment/scr3_lock" unique_id=394388621 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(4490, 1195)
+scale = Vector2(6.312496, 1.374999)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env3" parent="Textures/Enviroment/scr3_lock" unique_id=2104161015 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(4174.0005, 1195)
+scale = Vector2(6.312496, 1.374999)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="Env4" parent="Textures/Enviroment/scr3_lock" unique_id=1066703085 instance=ExtResource("6_d1ilt")]
+z_index = -1
+position = Vector2(4028.5, 1195)
+scale = Vector2(3.921874, 1.374999)
+texture = ExtResource("9_fdnlq")
+state = 4
+
+[node name="scr3_mound" type="Node" parent="Textures/Enviroment" unique_id=227416534]
+
+[node name="Env" parent="Textures/Enviroment/scr3_mound" unique_id=1082773638 instance=ExtResource("6_d1ilt")]
+position = Vector2(3552, 1797)
+scale = Vector2(12.28125, 6.6562495)
+texture = ExtResource("10_k12tt")
+state = 3
+
 [node name="DepthsGround" type="Node" parent="Textures/Enviroment" unique_id=519998459]
 
 [node name="Env" parent="Textures/Enviroment/DepthsGround" unique_id=1988224238 instance=ExtResource("6_d1ilt")]
@@ -704,6 +777,22 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Pickup15" parent="Pickups" unique_id=1503886419 instance=ExtResource("4_jjvhh")]
 position = Vector2(4773, 813)
 
+[node name="Pickup16" parent="Pickups" unique_id=1139895266 instance=ExtResource("4_jjvhh")]
+position = Vector2(4773, 1146)
+
+[node name="Pickup17" parent="Pickups" unique_id=1106385217 instance=ExtResource("4_jjvhh")]
+position = Vector2(3591, 869)
+rotation = 1.9233
+
+[node name="Pickup18" parent="Pickups" unique_id=79612214 instance=ExtResource("4_jjvhh")]
+position = Vector2(4644, 1527)
+
+[node name="Pickup19" parent="Pickups" unique_id=188908097 instance=ExtResource("4_jjvhh")]
+position = Vector2(4773, 1913)
+
+[node name="Pickup20" parent="Pickups" unique_id=1838740771 instance=ExtResource("4_jjvhh")]
+position = Vector2(4160, 1913)
+
 [node name="Areas" type="Node" parent="." unique_id=1348208264]
 
 [node name="Air" type="Area2D" parent="Areas" unique_id=957781194]
@@ -748,8 +837,11 @@ scale = Vector2(3.595, 3.595)
 position = Vector2(4449, 13.000008)
 scale = Vector2(3.595, 3.595)
 
+[node name="IceSpike5" parent="Obsticals" unique_id=243256008 instance=ExtResource("16_h1bgf")]
+position = Vector2(4193, 1219)
+scale = Vector2(2.82, 2.82)
+
 [node name="CanvasLayer" parent="." unique_id=1794298050 instance=ExtResource("6_21xkr")]
-visible = false
 
 [editable path="Cameras/Camera"]
 [editable path="Cameras/Camera2"]
