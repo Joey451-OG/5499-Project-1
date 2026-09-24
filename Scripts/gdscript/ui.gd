@@ -2,12 +2,16 @@ extends CanvasLayer
 
 @export var score_text := "Sticks: %d"
 @export var next_upgd_text := "Next upgrade: %d s."
+@export var win_text := "You WIN!"
+@export var loose_text := "You Drowned..."
+
 @onready var end_score: Label = $"EndScreen/Panel/End Score"
 @onready var score: Label = $Normal/Score
 @onready var next_upgrade: Label = $"Normal/Next Upgrade"
 @onready var normal: MarginContainer = $Normal
 @onready var end_screen: MarginContainer = $EndScreen
 @onready var vignette: ColorRect = $Vignette
+@onready var you_drowned: Label = $"EndScreen/Panel/You Drowned"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,8 +31,13 @@ func _process(_delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.DROWNED:
 		normal.hide()
 		end_screen.show()
-		end_score.text = score.text
 		
+		if Globals.points <= 25:
+			you_drowned.text = loose_text
+		else:
+			you_drowned.text = win_text
+		
+		end_score.text = score.text
 	if Globals.p_state == Globals.PlayerState.SWIMING:
 		vignette.show()
 		vignette.material.set_shader_parameter("alpha",
@@ -56,4 +65,5 @@ func _on_points_until_update():
 
 func _on_restart_pressed() -> void:
 	Globals.p_state = Globals.PlayerState.IDLE
+	Globals.points = 0
 	get_tree().reload_current_scene()

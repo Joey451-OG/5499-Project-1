@@ -961,23 +961,28 @@ position = Vector2(-289.6669, -62.66674)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks7" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=52181868]
+z_index = -2
 position = Vector2(-288.33356, 0.333313)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks8" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=1270307228]
+z_index = -2
 position = Vector2(-41.333344, -286.3336)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks9" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=614690262]
+z_index = -2
 position = Vector2(-40.333363, -349.00034)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks10" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=636491069]
+z_index = -2
 position = Vector2(17.000017, -272.00024)
 rotation = -1.3213031
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks11" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=988064205]
+z_index = -2
 position = Vector2(17.000017, -272.00024)
 rotation = -1.3213031
 texture = ExtResource("21_7k868")

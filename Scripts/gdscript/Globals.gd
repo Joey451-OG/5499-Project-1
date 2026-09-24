@@ -16,6 +16,9 @@ var points := 0 :
 		if points == 25:
 			print("[Globals.gd]: Emitting spawnKey")
 			emit_signal("spawnKey")
+		
+		if points > 25:
+			p_state = PlayerState.DROWNED
 
 var points_until_next_upgrade : int = 5:
 	set(value):
