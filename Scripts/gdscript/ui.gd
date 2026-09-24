@@ -66,4 +66,8 @@ func _on_points_until_update():
 func _on_restart_pressed() -> void:
 	Globals.p_state = Globals.PlayerState.IDLE
 	Globals.points = 0
+	
+	for key in Globals.current_abilities.keys():
+		Globals.current_abilities[key] = false
+	
 	get_tree().reload_current_scene()
