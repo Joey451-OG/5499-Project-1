@@ -783,71 +783,85 @@ state = 4
 [node name="Bottom_Dam" type="Node" parent="Textures" unique_id=847888580]
 
 [node name="BenvDamDither" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=820570778]
+z_index = -2
 position = Vector2(576, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither2" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=746044523]
+z_index = -2
 position = Vector2(311, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither3" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1728809423]
+z_index = -2
 position = Vector2(153, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither4" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=349104463]
+z_index = -2
 position = Vector2(153, 1271)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither5" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=351658106]
+z_index = -2
 position = Vector2(153, 1266)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither6" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1577677156]
+z_index = -2
 position = Vector2(153, 1496)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither7" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=955615849]
+z_index = -2
 position = Vector2(153, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither8" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=769679356]
+z_index = -2
 position = Vector2(428.99997, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither9" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1269924442]
+z_index = -2
 position = Vector2(723, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither10" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=498052550]
+z_index = -2
 position = Vector2(860.99994, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither11" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1469805378]
+z_index = -2
 position = Vector2(860.99994, 1497)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither12" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1278511221]
+z_index = -2
 position = Vector2(929, 1275)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither13" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1419670026]
+z_index = -2
 position = Vector2(836, 1017)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither14" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1505071782]
+z_index = -2
 position = Vector2(1045, 1017)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
@@ -855,83 +869,100 @@ texture = ExtResource("15_1w6v2")
 [node name="Air" type="Node" parent="Textures/Bottom_Dam" unique_id=716629223]
 
 [node name="BenvAirSquare" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=1265918446]
+z_index = -2
 position = Vector2(340, 1382)
 scale = Vector2(6.212028, 6.212028)
 texture = ExtResource("15_gt3je")
 
 [node name="BenvAirSquare2" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=951724792]
+z_index = -2
 position = Vector2(432.99994, 1593)
 scale = Vector2(6.212028, 6.212028)
 texture = ExtResource("15_gt3je")
 
 [node name="BenvAirSquare3" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=1993988153]
+z_index = -2
 position = Vector2(650, 1280.9999)
 scale = Vector2(6.212028, 6.212028)
 texture = ExtResource("15_gt3je")
 
 [node name="BenvAirSquareRounded" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=453508350]
+z_index = -2
 position = Vector2(766, 1785)
 scale = Vector2(3.2400002, 3.2400002)
 texture = ExtResource("16_3pmx8")
 
 [node name="BenvAirSquareRounded2" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=1571537277]
+z_index = -2
 position = Vector2(772, 1163)
 scale = Vector2(3.2400002, 3.2400002)
 texture = ExtResource("16_3pmx8")
 
 [node name="BenvAirSquareRounded3" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=2081324496]
+z_index = -2
 position = Vector2(949, 1780.0001)
 scale = Vector2(3.2400002, 3.2400002)
 texture = ExtResource("16_3pmx8")
 
 [node name="BenvAirSquare4" type="Sprite2D" parent="Textures/Bottom_Dam/Air" unique_id=1204839544]
+z_index = -2
 position = Vector2(650, 1670)
 scale = Vector2(6.212028, 6.212028)
 texture = ExtResource("15_gt3je")
 
 [node name="BenvAirCircle" type="Sprite2D" parent="Textures/Bottom_Dam/Air/BenvAirSquare4" unique_id=1274811186]
+z_index = -2
 position = Vector2(-50.708076, -80.97195)
 texture = ExtResource("17_u50mg")
 
 [node name="BenvAirCircle2" type="Sprite2D" parent="Textures/Bottom_Dam/Air/BenvAirSquare4" unique_id=629939924]
+z_index = -2
 position = Vector2(-50.708076, -9.819653)
 texture = ExtResource("17_u50mg")
 
 [node name="BenvAirCircle3" type="Sprite2D" parent="Textures/Bottom_Dam/Air/BenvAirSquare4" unique_id=234788928]
+z_index = -2
 position = Vector2(-21.732029, 4.8293486)
 texture = ExtResource("17_u50mg")
 
 [node name="BenvAirCircle4" type="Sprite2D" parent="Textures/Bottom_Dam/Air/BenvAirSquare4" unique_id=1431986370]
+z_index = -2
 position = Vector2(-21.732029, 4.8293486)
 texture = ExtResource("17_u50mg")
 
 [node name="BenvRock" type="Sprite2D" parent="Textures" unique_id=1307439785]
+z_index = -2
 position = Vector2(697, 977)
 scale = Vector2(2.8958485, 3.329897)
 texture = ExtResource("19_ueoa1")
 
 [node name="BenvRock3" type="Sprite2D" parent="Textures" unique_id=901149585]
+z_index = -2
 position = Vector2(138, 1785.9999)
 scale = Vector2(2.8958485, 3.329897)
 texture = ExtResource("19_ueoa1")
 
 [node name="BenvRock4" type="Sprite2D" parent="Textures" unique_id=1628490213]
+z_index = -2
 position = Vector2(1095, 966)
 scale = Vector2(2.8958485, 3.329897)
 texture = ExtResource("19_ueoa1")
 
 [node name="BenvRock5" type="Sprite2D" parent="Textures" unique_id=1763377032]
+z_index = -2
 position = Vector2(930, 1946)
 scale = Vector2(2.8958485, 3.329897)
 texture = ExtResource("19_ueoa1")
 
 [node name="BenvRock2" type="Sprite2D" parent="Textures" unique_id=1318659663]
+z_index = -2
 position = Vector2(122, 950.99994)
 rotation = -0.5809157
 scale = Vector2(5.245931, 2.9497328)
 texture = ExtResource("19_ueoa1")
 
 [node name="BenvSticksCenter" type="Sprite2D" parent="Textures" unique_id=1655357291]
+z_index = -1
 position = Vector2(954, 1606.0001)
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
@@ -961,57 +992,57 @@ position = Vector2(-289.6669, -62.66674)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks7" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=52181868]
-z_index = -2
 position = Vector2(-288.33356, 0.333313)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks8" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=1270307228]
-z_index = -2
 position = Vector2(-41.333344, -286.3336)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks9" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=614690262]
-z_index = -2
 position = Vector2(-40.333363, -349.00034)
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks10" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=636491069]
-z_index = -2
 position = Vector2(17.000017, -272.00024)
 rotation = -1.3213031
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticks11" type="Sprite2D" parent="Textures/BenvSticksCenter" unique_id=988064205]
-z_index = -2
 position = Vector2(17.000017, -272.00024)
 rotation = -1.3213031
 texture = ExtResource("21_7k868")
 
 [node name="BenvSticksCenter2" type="Sprite2D" parent="Textures" unique_id=1814217425]
+z_index = -2
 position = Vector2(1022.00006, 1443.0001)
 rotation = 0.7964659
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
 
 [node name="BenvSticksCenter3" type="Sprite2D" parent="Textures" unique_id=103273102]
+z_index = -2
 position = Vector2(1022, 1261)
 rotation = -0.5810438
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
 
 [node name="BenvSticksCenter4" type="Sprite2D" parent="Textures" unique_id=471249006]
+z_index = -2
 position = Vector2(962.00006, 1090)
 rotation = 1.0340285
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
 
 [node name="BenvSticksCenter5" type="Sprite2D" parent="Textures" unique_id=1889966611]
+z_index = -2
 position = Vector2(883.00006, 972)
 rotation = -0.5673762
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
 
 [node name="BenvSticksCenter6" type="Sprite2D" parent="Textures" unique_id=950824511]
+z_index = -2
 position = Vector2(883.00006, 972)
 scale = Vector2(2.9999976, 2.9999976)
 texture = ExtResource("20_6vcvc")
