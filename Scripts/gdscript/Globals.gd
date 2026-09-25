@@ -13,7 +13,7 @@ var points := 0 :
 		points = value
 		emit_signal("pointsUpdate")
 		
-		if points == 2:
+		if points == 25:
 			print("[Globals.gd]: Emitting spawnKey")
 			emit_signal("spawnKey")
 		
