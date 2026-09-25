@@ -107,8 +107,8 @@ func _on_lung_timer_timeout() -> void:
 	Globals.p_state = Globals.PlayerState.DROWNED
 
 func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
-	if area.has_meta("isAir"):	
-		if pickup != null and area.get_meta("isAir"):
+	if area.has_meta("isAir") and area.has_meta("isScoreable"):
+		if pickup != null and area.get_meta("isAir") and area.get_meta("isScoreable"):
 			pickup.queue_free()
 			Globals.points += 1
 			print("[player.gd]: PLAYER SCORED points: %d" % Globals.points)
