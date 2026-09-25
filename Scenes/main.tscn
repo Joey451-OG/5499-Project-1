@@ -74,6 +74,12 @@ debug_color = Color(0.9999998, 0.0024176077, 0.09460204, 0.41960785)
 position = Vector2(173, 285)
 polygon = PackedVector2Array(-14, -56, -148, -128, -146, -227, 34, -263, 131, -205, 138, -107, 138, 4, 454, -1, 466, 91, 587, 89, 243, -274, -166, -276, -180, 594, 592, 593, 906, 597, 936, 490, 730, 444, 696, 299, 587, 224, 2, 226)
 
+[node name="LowerDamHitBox" type="StaticBody2D" parent="Collisions and Walls" unique_id=1979632887]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions and Walls/LowerDamHitBox" unique_id=1389369758]
+position = Vector2(132, 1191)
+polygon = PackedVector2Array(0, -1, -1, -35, -1, -51, -15, -90, 89, -215, 174, -241, 250, -240, 320, -216, 364, -178, 390, -148, 446, -127, 491, -123, 576, -151, 651, -156, 714, -148, 752, -111, 763, -59, 766, 54, 725, 91, 741, 484, 896, 482, 921, 522, 1073, 521, 1072, -312, -127, -309, -124, 726, 900, 725, 897, 695, 869, 693, 842, 649, 764, 646, 715, 698, 559, 694, 536, 673, 484, 674, 447, 707, 349, 705, 275, 688, 209, 622, 98, 605, 84, 524, 35, 481, 11, 387)
+
 [node name="Textures" type="Node" parent="." unique_id=392412433]
 
 [node name="Ice Sheet" type="Line2D" parent="Textures" unique_id=1295081621]
@@ -783,61 +789,61 @@ state = 4
 [node name="Bottom_Dam" type="Node" parent="Textures" unique_id=847888580]
 
 [node name="BenvDamDither" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=820570778]
-z_index = -2
+z_index = -4
 position = Vector2(576, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither2" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=746044523]
-z_index = -2
+z_index = -4
 position = Vector2(311, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither3" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1728809423]
-z_index = -2
+z_index = -4
 position = Vector2(153, 1027)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither4" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=349104463]
-z_index = -2
+z_index = -4
 position = Vector2(153, 1271)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither5" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=351658106]
-z_index = -2
+z_index = -4
 position = Vector2(153, 1266)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither6" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1577677156]
-z_index = -2
+z_index = -4
 position = Vector2(153, 1496)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither7" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=955615849]
-z_index = -2
+z_index = -4
 position = Vector2(153, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither8" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=769679356]
-z_index = -2
+z_index = -4
 position = Vector2(428.99997, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither9" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=1269924442]
-z_index = -2
+z_index = -4
 position = Vector2(723, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
 
 [node name="BenvDamDither10" type="Sprite2D" parent="Textures/Bottom_Dam" unique_id=498052550]
-z_index = -2
+z_index = -4
 position = Vector2(860.99994, 1773)
 scale = Vector2(4.6000013, 4.6000013)
 texture = ExtResource("15_1w6v2")
@@ -1226,7 +1232,7 @@ metadata/isAir = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/big_stick_air" unique_id=1616790960]
 position = Vector2(120, 1102)
-polygon = PackedVector2Array(-1, 0, 43, -61, 103, -123, 187, -149, 262, -148, 332, -125, 373, -90, 402, -58, 458, -37, 504, -33, 589, -61, 663, -66, 725, -58, 762, -22, 773, 28, 777, 91, 777, 140, 736, 179, 752, 574, 907, 572, 932, 614, 933, 744, 908, 783, 887, 781, 857, 735, 774, 731, 726, 784, 577, 781, 549, 761, 492, 761, 465, 792, 370, 793, 290, 776, 223, 710, 113, 692, 103, 631, 74, 590, 42, 581, 22, 574, 21, 552, 13, 37)
+polygon = PackedVector2Array(-1, 0, 43, -61, 103, -123, 187, -149, 262, -148, 332, -125, 373, -90, 402, -58, 458, -37, 504, -33, 589, -61, 663, -66, 725, -58, 762, -22, 773, 28, 777, 91, 777, 140, 736, 179, 752, 574, 907, 572, 932, 614, 933, 744, 908, 783, 887, 781, 857, 735, 774, 731, 726, 784, 577, 781, 549, 761, 492, 761, 465, 792, 370, 793, 290, 776, 223, 710, 113, 692, 99, 612, 50, 570, 38, 521, 27, 477, 13, 37)
 
 [node name="Obsticals" type="Node" parent="." unique_id=1201869154]
 
