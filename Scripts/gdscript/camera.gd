@@ -14,13 +14,13 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player != null:
 		camera.global_position = player.global_position
 		camera.make_current()
 	
 
-func set_camera_limits_to_polygon(camera: Camera2D) -> void:
+func set_camera_limits_to_polygon(current_camera: Camera2D) -> void:
 	var shape = collision_shape_2d.shape
 	if not shape:
 		return
@@ -39,15 +39,15 @@ func set_camera_limits_to_polygon(camera: Camera2D) -> void:
 	var max_y = max(global_rect_position.y, global_rect_end.y)
 
 	# Apply the universal bounding box limits to the Camera2D
-	camera.limit_left = int(min_x - overhang)
-	camera.limit_right = int(max_x + overhang)
-	camera.limit_top = int(min_y - overhang)
-	camera.limit_bottom = int(max_y + overhang)
+	current_camera.limit_left = int(min_x - overhang)
+	current_camera.limit_right = int(max_x + overhang)
+	current_camera.limit_top = int(min_y - overhang)
+	current_camera.limit_bottom = int(max_y + overhang)
 
 func _on_camera_zone_area_entered(area: Area2D) -> void:
 	print("[camera.gd]: DETECTED PLAYER")
 	player = area.get_parent()
 
-func _on_camera_zone_area_exited(area: Area2D) -> void:
+func _on_camera_zone_area_exited(_area: Area2D) -> void:
 	print("[camera.gd]: DETECTED PLAYER LEAVING")
 	player = null

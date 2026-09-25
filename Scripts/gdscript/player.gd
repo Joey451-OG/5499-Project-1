@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 			isUnderWater = !area.get_meta("isAir")
 			#print(isUnderWater)
 			
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.DROWNED:
 		return
 	
@@ -98,9 +98,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 # Checks if value is in range (min, max) (exclusive)
-func is_in_range(value: float, min: float, max: float) -> bool:
-	#print("Value: %.2f: %s" % [value, min < value and value < max])
-	return min < value and value < max
+func is_in_range(value: float, range_min: float, range_max: float) -> bool:
+	#print("Value: %.2f: %s" % [value, range_min < value and value < range_max])
+	return range_min < value and value < range_max
 
 func _on_lung_timer_timeout() -> void:
 	print("[LUNG TIMER | player.gd]: Player Drowned!")
