@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 			isUnderWater = !area.get_meta("isAir")
 			#print(isUnderWater)
 			
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Globals.p_state == Globals.PlayerState.DROWNED:
 		return
 	
@@ -98,17 +98,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 # Checks if value is in range (min, max) (exclusive)
-func is_in_range(value: float, min: float, max: float) -> bool:
-	#print("Value: %.2f: %s" % [value, min < value and value < max])
-	return min < value and value < max
+func is_in_range(value: float, range_min: float, range_max: float) -> bool:
+	#print("Value: %.2f: %s" % [value, range_min < value and value < range_max])
+	return range_min < value and value < range_max
 
 func _on_lung_timer_timeout() -> void:
 	print("[LUNG TIMER | player.gd]: Player Drowned!")
 	Globals.p_state = Globals.PlayerState.DROWNED
 
 func _on_interacting_hit_box_area_entered(area: Area2D) -> void:
-	if area.has_meta("isAir"):	
-		if pickup != null and area.get_meta("isAir"):
+	if area.has_meta("isAir") and area.has_meta("isScoreable"):
+		if pickup != null and area.get_meta("isAir") and area.get_meta("isScoreable"):
 			pickup.queue_free()
 			Globals.points += 1
 			print("[player.gd]: PLAYER SCORED points: %d" % Globals.points)

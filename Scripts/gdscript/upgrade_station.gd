@@ -23,7 +23,7 @@ func _on_points_update():
 			Globals.points_until_next_upgrade = ability_unlock_sticks[key] - Globals.points
 			break
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_area_2d_area_entered(_area: Area2D) -> void:
 	if Input.is_action_pressed("swim"):
 		for key in ability_unlock_sticks.keys():
 			if Globals.points >= ability_unlock_sticks[key] and !Globals.current_abilities[key]:

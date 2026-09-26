@@ -9,5 +9,5 @@ func _ready() -> void:
 func _spawn_key():
 	print("[level.gd]: Received spawnKey signal")
 	var key : Node2D = key_scene.instantiate()
-	add_child(key)
+	call_deferred("add_child", key)
 	key.position = key_spawn.position

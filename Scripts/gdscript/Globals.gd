@@ -47,7 +47,7 @@ func _ready() -> void:
 		for key in current_abilities.keys():
 			current_abilities[key] = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_check_for_ramped_abilites()
 	
 func _check_for_ramped_abilites():

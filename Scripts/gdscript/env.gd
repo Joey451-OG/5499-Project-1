@@ -77,7 +77,7 @@ func _ready() -> void:
 	state = state
 
 
-func _on_interactable_hit_box_area_entered(area: Area2D) -> void:
+func _on_interactable_hit_box_area_entered(_area: Area2D) -> void:
 	print("[env.gd]: DETECTED TAIL")
 	
 	if Globals.current_abilities["breaker"]:
